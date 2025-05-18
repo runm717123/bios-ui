@@ -1,0 +1,19 @@
+{
+  "name": "@bios-ui/button",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@bios-ui/eslint-config": "workspace:*",
+    "@bios-ui/typescript-config": "workspace:*",
+    "@types/react": "^19.1.4"
+  },
+  "dependencies": {
+    "@linaria/core": "^6.3.0",
+    "@linaria/react": "^6.3.0",
+    "@wyw-in-js/babel-preset": "^0.6.0",
+    "react": "^19.1.0"
+  }
+}
