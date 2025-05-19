@@ -1,4 +1,0 @@
-{
-  "extends": "@bios-ui/typescript-config/vite.json",
-  "include": ["src"]
-}
