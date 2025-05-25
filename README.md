@@ -1,33 +1,42 @@
-# `Turborepo` Vite starter
+# bios-ui
 
-This is a community-maintained example. If you experience a problem, please submit a pull request with a fix. GitHub Issues will be closed.
+**bios-ui** is a React component library designed to streamline the development of user interfaces.  
+It offers a collection of reusable components to accelerate your development process.
 
-## Using this example
+## 📦 Installation
 
-Run the following command:
+Install the package via npm:
 
-```sh
-npx create-turbo@latest -e with-vite
+```bash
+pnpm install bios-ui
 ```
 
-## What's inside?
+## 🚀 Usage
 
-This Turborepo includes the following packages and apps:
+Import and use components in your React application:
 
-### Apps and Packages
+```jsx
+import { Button } from 'bios-ui';
 
-- `docs`: a vanilla [vite](https://vitejs.dev) ts app
-- `web`: another vanilla [vite](https://vitejs.dev) ts app
-- `@bios-ui/ui`: a stub component & utility library shared by both `web` and `docs` applications
-- `@bios-ui/eslint-config`: shared `eslint` configurations
-- `@bios-ui/typescript-config`: `tsconfig.json`s used throughout the monorepo
+function App() {
+  return <Button>Click Me</Button>;
+}
+```
 
-Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
+## 📚 Documentation
 
-### Utilities
+For detailed documentation and component demos, visit our Storybook:
 
-This Turborepo has some additional tools already setup for you:
+👉 https://placid-toothbrush.surge.sh/
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+## 🛠️ Contributing
+
+We welcome contributions! Here's the tips you can follow:
+
+- Follow the existing code style and naming conventions.
+
+- Write clear and concise commit messages.
+
+- Update or add documentation for any new components or features.
+
+- Ensure your code is well-tested and doesn't break existing functionality.
