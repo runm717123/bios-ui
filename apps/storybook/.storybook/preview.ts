@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/react'
+import '@bios-ui/core';
 
 const preview: Preview = {
   parameters: {
