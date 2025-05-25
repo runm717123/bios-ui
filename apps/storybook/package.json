@@ -8,7 +8,8 @@
 		"lint": "eslint .",
 		"preview": "vite preview",
 		"dev": "storybook dev -p 6006",
-		"build-storybook": "storybook build"
+		"build-storybook": "storybook build",
+		"deploy": "surge ./storybook-static placid-toothbrush.surge.sh"
 	},
 	"dependencies": {
 		"@bios-ui/basic": "workspace:*",
