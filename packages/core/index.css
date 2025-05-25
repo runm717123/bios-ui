@@ -5,4 +5,8 @@ body {
 	--font-size-lg: 20px;
   --bg-main: #000b25;
   --color-foreground: #1e82dd;
+
+	button {
+		cursor: pointer;
+	}
 }
