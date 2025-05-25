@@ -1,5 +1,5 @@
 {
-  "name": "@bios-ui/button",
+  "name": "@bios-ui/basic",
   "type": "module",
   "scripts": {
     "dev": "tsc --watch",

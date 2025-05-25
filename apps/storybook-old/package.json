@@ -13,12 +13,13 @@
 	},
 	"dependencies": {
 		"react": "^19.1.0",
-		"react-dom": "^19.1.0"
+		"react-dom": "^19.1.0",
+		"@bios-ui/core": "workspace:*",
+		"@bios-ui/basic": "workspace:*"
 	},
 	"devDependencies": {
 		"@babel/preset-react": "^7.27.1",
 		"@babel/preset-typescript": "^7.27.1",
-		"@bios-ui/button": "workspace:*",
 		"@chromatic-com/storybook": "^3",
 		"@eslint/js": "^9.25.0",
 		"@storybook/addon-essentials": "^8.6.14",

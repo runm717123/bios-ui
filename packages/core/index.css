@@ -1,0 +1,8 @@
+body {
+	margin: 0;
+	--font-size-sm: 12px;
+	--font-size-md: 16px;
+	--font-size-lg: 20px;
+  --bg-main: #000b25;
+  --color-foreground: #1e82dd;
+}

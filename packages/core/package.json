@@ -1,0 +1,12 @@
+{
+	"name": "@bios-ui/core",
+	"type": "module",
+	"scripts": {
+		"dev": "tsc --watch",
+		"build": "tsc"
+	},
+	"devDependencies": {
+		"@bios-ui/eslint-config": "workspace:*",
+		"@bios-ui/typescript-config": "workspace:*"
+	}
+}
