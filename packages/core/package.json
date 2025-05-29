@@ -1,14 +1,19 @@
 {
 	"name": "@bios-ui/core",
 	"type": "module",
+	"version": "0.0.0",
 	"scripts": {
 		"dev": "tsc --watch",
-		"build": "tsc"
+		"build": "tsc",
+		"publish": "pnpm publish --access public"
 	},
 	"devDependencies": {
 		"@bios-ui/eslint-config": "workspace:*",
 		"@bios-ui/typescript-config": "workspace:*"
 	},
+	"files": [
+		"index.css"
+	],
 	"main": "index.css",
 	"sideEffects": [
 		"index.css"
