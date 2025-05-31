@@ -27,7 +27,7 @@ export const bButton = css`
 	}
 
 	&:active {
-		background-color: white;
+		background-color: rgba(255, 255, 255, 0.9);
 		border-color: white;
 		box-shadow: none;
 	}

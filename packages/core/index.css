@@ -1,12 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Code:wght@300..700&display=swap');
+
 body {
 	margin: 0;
 	--font-size-sm: 12px;
-	--font-size-md: 16px;
+	--font-size-md: 15px;
 	--font-size-lg: 20px;
 	--bg-main: #000b25;
 	--color-foreground: #1e82dd;
+	font-family: 'Courier Prime', monospace;
+	color: var(--color-foreground);
 
 	button {
 		cursor: pointer;
+	}
+
+	input,
+	button {
+		color: inherit;
+		font-family: inherit;
+	}
+
+	span, input {
+		font-family: 'Fira Code', monospace;
 	}
 }
