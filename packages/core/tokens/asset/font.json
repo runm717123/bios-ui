@@ -1,0 +1,21 @@
+{
+	"asset": {
+		"font": {
+			"icon": {
+				"name": { "value": "MaterialIcons", "type": "fontFamily" },
+				"ttf": { "value": "assets/fonts/MaterialIcons-Regular.ttf", "type": "asset" },
+				"eot": { "value": "assets/fonts/MaterialIcons-Regular.eot", "type": "asset" },
+				"woff": { "value": "assets/fonts/MaterialIcons-Regular.woff", "type": "asset" },
+				"woff2": { "value": "assets/fonts/MaterialIcons-Regular.woff2", "type": "asset" }
+			},
+			"firacode": {
+				"name": { "value": "Fira Code", "type": "fontFamily" },
+				"ttf": { "value": "assets/fonts/FiraCode-VariableFont_wght.ttf", "type": "asset" }
+			},
+       "courierprime": {
+        "name": { "value": "Courier Prime", "type": "fontFamily" },
+        "ttf": { "value": "assets/fonts/CourierPrime-Regular.ttf", "type": "asset" }
+      }
+		}
+	}
+}

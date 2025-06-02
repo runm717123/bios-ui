@@ -1,0 +1,18 @@
+{
+  "font": {
+    "family": {
+      "icons": {
+        "value": "{asset.font.icon.name}",
+        "type": "fontFamily"
+      },
+      "base": {
+        "value": "{asset.font.firacode.name}",
+        "type": "fontFamily"
+      },
+      "heading": {
+        "value": "{asset.font.courierprime.name}",
+        "type": "fontFamily"
+      }
+    }
+  }
+}

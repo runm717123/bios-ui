@@ -1,9 +1,0 @@
-{
-  "extends": "@bios-ui/typescript-config/base.json",
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "outDir": "dist",
-    "rootDir": "src"
-  },
-  "exclude": ["node_modules", "dist"]
-}

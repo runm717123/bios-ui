@@ -1,0 +1,14 @@
+{
+  "size": {
+    "font": {
+      "xs": { "value": "0.75", "type": "fontSize" },
+      "sm": { "value": "0.875", "type": "fontSize" },
+      "md": { "value": "1", "type": "fontSize" },
+      "lg": { "value": "1.25", "type": "fontSize" },
+      "xl": { "value": "1.5", "type": "fontSize" },
+      "xxl": { "value": "2", "type": "fontSize" },
+      "xxxl": { "value": "3", "type": "fontSize" },
+      "base": { "value": "{size.font.md}", "type": "fontSize" }
+    }
+  }
+}

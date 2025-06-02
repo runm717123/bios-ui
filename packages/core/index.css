@@ -1,14 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Code:wght@300..700&display=swap');
+@import url('./dist/bios-ui.css');
+@import url('./tokens/generated.css');
 
 body {
 	margin: 0;
-	--font-size-sm: 12px;
-	--font-size-md: 15px;
-	--font-size-lg: 20px;
-	--bg-main: #000b25;
-	--color-foreground: #1e82dd;
 	font-family: 'Courier Prime', monospace;
-	color: var(--color-foreground);
+	color: var(--color-fg-dark);
 
 	button {
 		cursor: pointer;
