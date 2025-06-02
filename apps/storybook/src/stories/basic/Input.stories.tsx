@@ -8,7 +8,7 @@ const meta = {
 	parameters: {
 		layout: 'centered',
 	},
-	args: { onClick: fn(), placeholder: 'Enter your text here' },
+	args: { onClick: fn(), placeholder: 'Enter your text here', name: 'test' },
 } satisfies Meta<typeof Input>;
 
 export default meta;
@@ -22,7 +22,7 @@ export const WithLabel: Story = {
 			<InputLabel>
 				<BodyText>Username</BodyText>
 				<br />
-				<Input type="text" placeholder="Enter text here" onChange={fn()} {...props} />
+				<Input className="b-py1" type="text" placeholder="Enter text here" onChange={fn()} {...props} />
 			</InputLabel>
 		);
 	},

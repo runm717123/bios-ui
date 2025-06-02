@@ -2,8 +2,8 @@ import { css } from '@linaria/core';
 
 export const bButton = css`
 	background-color: transparent;
-	color: var(--color-foreground);
-	border: 2px solid var(--color-foreground);
+	color: var(--color-fb-dark);
+	border: 2px solid var(--color-fg-dark);
 
 	&[data-size='small'] {
 		padding: 0.25rem 0.5rem;
@@ -22,8 +22,8 @@ export const bButton = css`
 
 	&:hover {
 		box-shadow:
-			0 0 5px 0 var(--color-foreground) inset,
-			0 0 10px 2px var(--color-foreground);
+			0 0 5px 0 var(--color-fg-dark) inset,
+			0 0 10px 2px var(--color-fg-dark);
 	}
 
 	&:active {

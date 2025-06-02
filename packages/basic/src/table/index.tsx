@@ -6,6 +6,6 @@ export const Table = styled.table`
 	&,
 	td,
 	th {
-		border: 1px solid var(--color-foreground);
+		border: 1px solid var(--color-fg-dark);
 	}
 `;
