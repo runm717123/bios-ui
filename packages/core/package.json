@@ -1,7 +1,7 @@
 {
 	"name": "@bios-ui/core",
 	"type": "module",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"scripts": {
 		"build": "pnpm build:sd && pnpm build:css",
 		"publish": "pnpm publish --access public --no-git-checks",
@@ -32,7 +32,9 @@
 		"vite": "^6.3.5"
 	},
 	"files": [
-		"index.css"
+		"index.css",
+		"dist/bios-ui.css",
+		"tokens/generated.css"
 	],
 	"main": "index.css",
 	"sideEffects": [
