@@ -18,26 +18,26 @@ export const Default: Story = {
 			<Table>
 				<thead>
 					<tr>
-						<th>Header 1</th>
-						<th>Header 2</th>
-						<th>Header 3</th>
+						<th className="b-px4 b-py2">Header 1</th>
+						<th className="b-px4 b-py2">Header 2</th>
+						<th className="b-px4 b-py2">Header 3</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td>Row 1, Cell 1</td>
-						<td>Row 1, Cell 2</td>
-						<td>Row 1, Cell 3</td>
+						<td className="b-px4 b-py2">Row 1, Cell 1</td>
+						<td className="b-px4 b-py2">Row 1, Cell 2</td>
+						<td className="b-px4 b-py2">Row 1, Cell 3</td>
 					</tr>
 					<tr>
-						<td>Row 2, Cell 1</td>
-						<td>Row 2, Cell 2</td>
-						<td>Row 2, Cell 3</td>
+						<td className="b-px4 b-py2">Row 2, Cell 1</td>
+						<td className="b-px4 b-py2">Row 2, Cell 2</td>
+						<td className="b-px4 b-py2">Row 2, Cell 3</td>
 					</tr>
 					<tr>
-						<td>Row 3, Cell 1</td>
-						<td>Row 3, Cell 2</td>
-						<td>Row 3, Cell 3</td>
+						<td className="b-px4 b-py2">Row 3, Cell 1</td>
+						<td className="b-px4 b-py2">Row 3, Cell 2</td>
+						<td className="b-px4 b-py2">Row 3, Cell 3</td>
 					</tr>
 				</tbody>
 			</Table>
