@@ -6,6 +6,8 @@ export const Input = styled.input`
 	&:focus {
 		outline-width: 3px;
 	}
+
+	padding-block: calc(1 * var(--spacing-xs));
 `;
 
 export const InputLabel = styled.label`
