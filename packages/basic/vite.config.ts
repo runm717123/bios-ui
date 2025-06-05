@@ -27,7 +27,7 @@ export default defineConfig({
 			name: 'BiosUI',
 			// the proper extensions will be added
 			fileName: 'bios-ui',
-			formats: ['es', 'cjs'],
+			formats: ['es'],
 		},
 	},
 });

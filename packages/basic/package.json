@@ -1,8 +1,9 @@
 {
 	"name": "@bios-ui/basic",
 	"type": "module",
-	"version": "0.0.2",
+	"version": "0.0.4",
 	"main": "dist/bios-ui.js",
+	"types": "dist/src/index.d.ts",
 	"files": [
 		"dist/**/*"
 	],
