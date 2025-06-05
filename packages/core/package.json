@@ -1,7 +1,7 @@
 {
 	"name": "@bios-ui/core",
 	"type": "module",
-	"version": "0.0.5",
+	"version": "0.0.7",
 	"scripts": {
 		"build": "pnpm build:sd && pnpm build:css",
 		"pub": "pnpm publish --access public --no-git-checks",
