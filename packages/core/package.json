@@ -1,10 +1,10 @@
 {
 	"name": "@bios-ui/core",
 	"type": "module",
-	"version": "0.0.3",
+	"version": "0.0.5",
 	"scripts": {
 		"build": "pnpm build:sd && pnpm build:css",
-		"publish": "pnpm publish --access public --no-git-checks",
+		"pub": "pnpm publish --access public --no-git-checks",
 		"build:css": "vite build",
 		"build:sd": "style-dictionary build --config style-dictionary.config.json --verbose",
 		"dev": "nodemon --watch src --exec \"node build-on-change.js\""
