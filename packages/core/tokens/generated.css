@@ -3,18 +3,12 @@
  */
 
 :root {
-  --asset-font-icon-name: MaterialIcons;
-  --asset-font-icon-ttf: url("assets/fonts/MaterialIcons-Regular.ttf");
-  --asset-font-icon-eot: url("assets/fonts/MaterialIcons-Regular.eot");
-  --asset-font-icon-woff: url("assets/fonts/MaterialIcons-Regular.woff");
-  --asset-font-icon-woff2: url("assets/fonts/MaterialIcons-Regular.woff2");
   --asset-font-firacode-name: 'Fira Code';
   --asset-font-firacode-ttf: url("assets/fonts/FiraCode-VariableFont_wght.ttf");
   --asset-font-courierprime-name: 'Courier Prime';
   --asset-font-courierprime-ttf: url("assets/fonts/CourierPrime-Regular.ttf");
   --color-bg-dark: #000b25;
   --color-fg-dark: #1e82dd;
-  --font-family-icons: MaterialIcons;
   --font-family-base: 'Fira Code';
   --font-family-heading: 'Courier Prime';
   --size-font-xs: 0.75rem;
