@@ -42,6 +42,9 @@ importers:
       '@babel/preset-typescript':
         specifier: ^7.27.1
         version: 7.27.1(@babel/core@7.27.4)
+      '@bios-ui/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
       '@chromatic-com/storybook':
         specifier: ^4.0.0
         version: 4.0.0(storybook@9.0.9)
