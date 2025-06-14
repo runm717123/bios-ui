@@ -2,6 +2,14 @@
 	"name": "@bios-ui/core",
 	"type": "module",
 	"version": "0.0.9",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/runm717123/bios-ui.git"
+	},
+	"author": {
+		"name": "Nur",
+		"email": "runm717123@gmail.com"
+	},
 	"scripts": {
 		"build": "pnpm build:sd && pnpm build:css",
 		"pub": "pnpm publish --access public --no-git-checks",
