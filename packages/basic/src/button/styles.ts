@@ -32,3 +32,19 @@ export const bButton = css`
 		box-shadow: none;
 	}
 `;
+
+export const bButtonGroup = css`
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	margin-top: 1rem;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+
+	button {
+		background-color: var(--color-bg-soft);
+		flex: 1;
+		padding: 0.75rem !important;
+	}
+`;

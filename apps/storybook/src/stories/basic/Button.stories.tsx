@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
-import { Button } from '@bios-ui/basic';
+import { Button, ButtonGroup } from '@bios-ui/basic';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -24,4 +24,14 @@ export const Primary: Story = {
 	args: {
 		children: 'Button',
 	},
+};
+
+export const WithButtonGroup: Story = {
+	render: () => (
+		<ButtonGroup>
+			<Button>Info</Button>
+			<Button>Cancel</Button>
+			<Button>Save</Button>
+		</ButtonGroup>
+	),
 };
