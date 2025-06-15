@@ -1,9 +1,22 @@
 {
 	"name": "@bios-ui/basic",
 	"type": "module",
-	"version": "0.0.4",
+	"version": "0.0.7",
+	"sideEffects": false,
 	"main": "dist/bios-ui.js",
-	"types": "dist/src/index.d.ts",
+	"types": "dist/types/src/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/types/src/index.d.ts"
+		},
+		"./css": {
+			"import": "./dist/basic.css"
+		}
+	},
+	"files": [
+		"dist"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/runm717123/bios-ui.git"
@@ -12,9 +25,6 @@
 		"name": "Nur",
 		"email": "runm717123@gmail.com"
 	},
-	"files": [
-		"dist/**/*"
-	],
 	"scripts": {
 		"build": "vite build",
 		"lint": "eslint . --ext .ts,.tsx",
@@ -33,8 +43,11 @@
 		"@vitejs/plugin-react": "^4.5.1",
 		"@wyw-in-js/babel-preset": "^0.6.0",
 		"@wyw-in-js/vite": "^0.6.0",
-		"react": "^19.1.0",
 		"vite": "^6.3.5",
 		"vite-plugin-dts": "^4.5.4"
+	},
+	"dependencies": {
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0"
 	}
 }
