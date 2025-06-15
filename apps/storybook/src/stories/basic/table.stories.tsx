@@ -1,4 +1,4 @@
-import { Input, Table } from '@bios-ui/basic';
+import { Table } from '@bios-ui/basic';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
@@ -7,7 +7,7 @@ const meta = {
 	parameters: {
 		layout: 'centered',
 	},
-} satisfies Meta<typeof Input>;
+} satisfies Meta<typeof Table>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

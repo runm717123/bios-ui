@@ -1,15 +1,15 @@
-import { BodyText, Input, InputLabel } from '@bios-ui/basic';
+import { BodyText, TextArea, InputLabel } from '@bios-ui/basic';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { fn } from 'storybook/test';
 
 const meta = {
-	title: 'Bios UI/basic/Input',
-	component: Input,
+	title: 'Bios UI/basic/TextArea',
+	component: TextArea,
 	parameters: {
 		layout: 'centered',
 	},
 	args: { placeholder: 'Enter your text here', name: 'test' },
-} satisfies Meta<typeof Input>;
+} satisfies Meta<typeof TextArea>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -20,9 +20,9 @@ export const WithLabel: Story = {
 	render: (props) => {
 		return (
 			<InputLabel>
-				<BodyText>Username</BodyText>
+				<BodyText>Message</BodyText>
 				<br />
-				<Input className="b-py1" type="text" placeholder="Enter text here" onChange={fn()} {...props} />
+				<TextArea className="b-py1" placeholder="Enter your message here" onChange={fn()} {...props} />
 			</InputLabel>
 		);
 	},
