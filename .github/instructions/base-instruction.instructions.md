@@ -4,7 +4,7 @@ applyTo: '**'
 Coding standards, domain knowledge, and preferences that AI should follow.
 
 # Response Format
-- no need to include description or summary
+- no need to include description , summary, or any additional text
 - just display the code snippet, and display description only when asked
 
 # Code Structure

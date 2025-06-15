@@ -40,12 +40,14 @@
 		"vite": "^6.3.5"
 	},
 	"files": [
-		"index.css",
 		"dist/bios-ui.css",
-		"tokens/generated.css"
+		"tokens/generated.css",
+		"index.css"
 	],
 	"main": "index.css",
 	"sideEffects": [
+		"dist/bios-ui.css",
+		"tokens/generated.css",
 		"index.css"
 	]
 }
