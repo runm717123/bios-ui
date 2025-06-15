@@ -2,7 +2,7 @@ import { css } from '@linaria/core';
 
 export const bButton = css`
 	background-color: transparent;
-	color: var(--color-fb-dark);
+	color: var(--color-fg-dark);
 	border: 2px solid var(--color-fg-dark);
 
 	&[data-size='small'] {
@@ -43,8 +43,7 @@ export const bButtonGroup = css`
 	width: 100%;
 
 	button {
-		background-color: var(--color-bg-soft);
 		flex: 1;
-		padding: 0.75rem !important;
+		padding: 0.75rem;
 	}
 `;

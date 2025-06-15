@@ -1,7 +1,7 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
   root: true,
-  ignorePatterns: [".eslintrc.cjs"],
+  ignorePatterns: [".eslintrc.cjs", "*.js"],
   extends: ["@bios-ui/eslint-config/index.js"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
