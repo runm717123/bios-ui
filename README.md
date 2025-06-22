@@ -8,7 +8,7 @@ It offers a collection of reusable components to accelerate your development pro
 Install the package via npm:
 
 ```bash
-pnpm install bios-ui
+# coming soon
 ```
 
 ## 🚀 Usage
@@ -16,6 +16,7 @@ pnpm install bios-ui
 Import and use components in your React application:
 
 ```jsx
+# ignore
 import { Button } from 'bios-ui';
 
 function App() {
