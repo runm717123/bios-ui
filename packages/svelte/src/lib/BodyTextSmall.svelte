@@ -1,14 +1,16 @@
 <script lang="ts">
 	import type { HTMLAttributes } from 'svelte/elements';
+	import type { Snippet } from 'svelte';
 
 	interface Props extends HTMLAttributes<HTMLParagraphElement> {
+		children?: Snippet;
 	}
 
-	let { class: className = '', ...restProps }: Props = $props();
+	let { class: className = '', children, ...restProps }: Props = $props();
 </script>
 
 <p class="bBodyTextSmall {className}" {...restProps}>
-	<slot />
+	{@render children?.()}
 </p>
 
 <style>
