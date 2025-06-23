@@ -16,8 +16,10 @@ Coding standards, domain knowledge, and preferences that AI should follow.
 
   # UI components
   - @bios-ui/core
-  # basic components, e.g button, input, etc.
+  # react components
   - @bios-ui/basic
+  # svelte components
+  - @bios-ui/svelte
 
 # Coding Standards and Preferences
 ## General Coding Standards

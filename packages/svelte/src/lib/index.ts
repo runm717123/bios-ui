@@ -8,3 +8,4 @@ export { default as BodyText } from './BodyText.svelte';
 export { default as BodyTextSmall } from './BodyTextSmall.svelte';
 
 export type { ISelectOptions } from './Select.svelte';
+export type { ButtonProps, ISelectOptions as SelectOptions } from './components';

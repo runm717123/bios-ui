@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import { dirname, resolve } from 'path';
-import dts from 'vite-plugin-dts';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -13,11 +12,6 @@ export default defineConfig({
 			compilerOptions: {
 				customElement: false,
 			},
-		}),
-		dts({
-			insertTypesEntry: true,
-			outDir: 'dist',
-			include: ['src/lib/**/*'],
 		}),
 	],
 	build: {

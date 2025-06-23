@@ -12,7 +12,7 @@
 			"types": "./dist/index.d.ts"
 		},
 		"./css": {
-			"import": "./dist/style.css"
+			"import": "./dist/svelte.css"
 		}
 	},
 	"files": [
@@ -20,7 +20,7 @@
 	],
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build",
+		"build": "vite build && tsc --project tsconfig.app.json",
 		"preview": "vite preview",
 		"check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
 		"pub": "pnpm publish --access public --no-git-checks"
@@ -31,8 +31,7 @@
 		"svelte": "^5.28.1",
 		"svelte-check": "^4.1.6",
 		"typescript": "~5.8.3",
-		"vite": "^6.3.5",
-		"vite-plugin-dts": "^4.5.4"
+		"vite": "^6.3.5"
 	},
 	"peerDependencies": {
 		"svelte": "^5.0.0"
