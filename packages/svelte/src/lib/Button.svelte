@@ -1,18 +1,12 @@
 <script lang="ts">
-	import type { HTMLButtonAttributes } from 'svelte/elements';
-	import type { Snippet } from 'svelte';
-
-	interface Props extends HTMLButtonAttributes {
-		size?: 'small' | 'medium' | 'large';
-		children?: Snippet;
-	}
-
-	let { size = 'medium', class: className = '', children, ...restProps }: Props = $props();
+	export let size: 'small' | 'medium' | 'large' = 'medium';
+	export let className: string = '';
 </script>
 
-<button class="bButton {className}" data-size={size} {...restProps}>
-	{@render children?.()}
+<button class={`bButton ${className}`} data-size={size} {...$$restProps}>
+	<slot />
 </button>
+
 
 <style>
 	.bButton {

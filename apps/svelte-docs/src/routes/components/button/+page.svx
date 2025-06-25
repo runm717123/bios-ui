@@ -1,0 +1,110 @@
+---
+layout: _
+---
+
+<script>
+  import { Button } from '@bios-ui/svelte';
+</script>
+
+# Button
+
+A versatile button component that supports different sizes and can be customized with various props. Built with accessibility in mind and follows semantic HTML standards.
+
+## Default
+
+<div class="demo-container">
+  <Button>Click me</Button>
+</div>
+
+```svelte
+<Button>Click me</Button>
+```
+
+## Sizes
+
+<div class="demo-container">
+  <div class="demo-grid">
+    <div class="demo-item">
+      <Button size="small">Small</Button>
+      <span class="demo-label">Small</span>
+    </div>
+    <div class="demo-item">
+      <Button size="medium">Medium</Button>
+      <span class="demo-label">Medium (Default)</span>
+    </div>
+    <div class="demo-item">
+      <Button size="large">Large</Button>
+      <span class="demo-label">Large</span>
+    </div>
+  </div>
+</div>
+
+```svelte
+<Button size="small">Small</Button>
+<Button size="medium">Medium</Button>
+<Button size="large">Large</Button>
+```
+
+## States
+
+<div class="demo-container">
+  <div class="demo-grid">
+    <div class="demo-item">
+      <Button>Default</Button>
+      <span class="demo-label">Default</span>
+    </div>
+    <div class="demo-item">
+      <Button disabled>Disabled</Button>
+      <span class="demo-label">Disabled</span>
+    </div>
+  </div>
+</div>
+
+```svelte
+<Button>Default</Button>
+<Button disabled>Disabled</Button>
+```
+
+## Custom Class
+
+<div class="demo-container">
+  <Button class="custom-button">Custom Styled</Button>
+</div>
+
+```svelte
+<Button class="custom-button">Custom Styled</Button>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `size` | `'small' \| 'medium' \| 'large'` | `'medium'` | The size of the button |
+| `disabled` | `boolean` | `false` | Whether the button is disabled |
+| `class` | `string` | `undefined` | Additional CSS classes |
+| `type` | `'button' \| 'submit' \| 'reset'` | `'button'` | The button type |
+
+## Accessibility
+
+- Uses semantic `<button>` element
+- Supports keyboard navigation
+- Properly handles disabled state
+- Screen reader compatible
+- Follows WCAG 2.1 guidelines
+
+## Events
+
+The Button component forwards all standard button events:
+
+- `click`
+- `focus`
+- `blur`
+- `keydown`
+- `keyup`
+- And more...
+
+```svelte
+<Button on:click={() => console.log('Button clicked!')}>
+  Click me
+</Button>
+```

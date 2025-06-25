@@ -1,0 +1,206 @@
+---
+layout: _
+---
+
+<script>
+  import { Select, InputLabel } from '@bios-ui/svelte';
+</script>
+
+# Select
+
+A customizable select dropdown component that provides accessible option selection with proper keyboard navigation and screen reader support.
+
+## Default
+
+<div class="demo-container">
+  <Select>
+    <option value="">Choose an option</option>
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </Select>
+</div>
+
+```svelte
+<Select>
+  <option value="">Choose an option</option>
+  <option value="option1">Option 1</option>
+  <option value="option2">Option 2</option>
+  <option value="option3">Option 3</option>
+</Select>
+```
+
+## With Label
+
+<div class="demo-container">
+  <div style="display: flex; flex-direction: column; gap: 0.5rem; max-width: 300px;">
+    <InputLabel for="country-select">Country</InputLabel>
+    <Select id="country-select">
+      <option value="">Select a country</option>
+      <option value="us">United States</option>
+      <option value="ca">Canada</option>
+      <option value="uk">United Kingdom</option>
+      <option value="de">Germany</option>
+      <option value="fr">France</option>
+    </Select>
+  </div>
+</div>
+
+```svelte
+<InputLabel for="country-select">Country</InputLabel>
+<Select id="country-select">
+  <option value="">Select a country</option>
+  <option value="us">United States</option>
+  <option value="ca">Canada</option>
+  <option value="uk">United Kingdom</option>
+  <option value="de">Germany</option>
+  <option value="fr">France</option>
+</Select>
+```
+
+## States
+
+<div class="demo-container">
+  <div class="demo-grid">
+    <div class="demo-item">
+      <Select>
+        <option value="">Default</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+      </Select>
+      <span class="demo-label">Default</span>
+    </div>
+    <div class="demo-item">
+      <Select disabled>
+        <option value="">Disabled</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+      </Select>
+      <span class="demo-label">Disabled</span>
+    </div>
+    <div class="demo-item">
+      <Select required>
+        <option value="">Required</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+      </Select>
+      <span class="demo-label">Required</span>
+    </div>
+  </div>
+</div>
+
+```svelte
+<Select>
+  <option value="">Default</option>
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+</Select>
+
+<Select disabled>
+  <option value="">Disabled</option>
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+</Select>
+
+<Select required>
+  <option value="">Required</option>
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+</Select>
+```
+
+## With Pre-selected Value
+
+<div class="demo-container">
+  <Select value="option2">
+    <option value="">Choose an option</option>
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2 (Selected)</option>
+    <option value="option3">Option 3</option>
+  </Select>
+</div>
+
+```svelte
+<Select value="option2">
+  <option value="">Choose an option</option>
+  <option value="option1">Option 1</option>
+  <option value="option2">Option 2 (Selected)</option>
+  <option value="option3">Option 3</option>
+</Select>
+```
+
+## Multiple Selection
+
+<div class="demo-container">
+  <Select multiple style="height: 120px;">
+    <option value="apple">Apple</option>
+    <option value="banana">Banana</option>
+    <option value="cherry">Cherry</option>
+    <option value="date">Date</option>
+    <option value="elderberry">Elderberry</option>
+  </Select>
+</div>
+
+```svelte
+<Select multiple style="height: 120px;">
+  <option value="apple">Apple</option>
+  <option value="banana">Banana</option>
+  <option value="cherry">Cherry</option>
+  <option value="date">Date</option>
+  <option value="elderberry">Elderberry</option>
+</Select>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `value` | `string` | `undefined` | The selected value |
+| `multiple` | `boolean` | `false` | Allow multiple selections |
+| `disabled` | `boolean` | `false` | Whether the select is disabled |
+| `required` | `boolean` | `false` | Whether the select is required |
+| `class` | `string` | `undefined` | Additional CSS classes |
+| `id` | `string` | `undefined` | The select ID |
+| `name` | `string` | `undefined` | The select name |
+| `size` | `number` | `undefined` | Number of visible options |
+
+## Accessibility
+
+- Uses semantic `<select>` element
+- Supports keyboard navigation (Arrow keys, Enter, Space)
+- Works with screen readers
+- Can be associated with labels using `id` and `for` attributes
+- Supports all standard select attributes
+- Proper focus management
+- Follows WCAG 2.1 guidelines
+
+## Events
+
+The Select component forwards all standard select events:
+
+- `change`
+- `focus`
+- `blur`
+- `keydown`
+- `keyup`
+- And more...
+
+```svelte
+<script>
+  let selectedValue = '';
+  
+  function handleChange(event) {
+    selectedValue = event.target.value;
+    console.log('Selected:', selectedValue);
+  }
+</script>
+
+<Select bind:value={selectedValue} on:change={handleChange}>
+  <option value="">Choose an option</option>
+  <option value="option1">Option 1</option>
+  <option value="option2">Option 2</option>
+  <option value="option3">Option 3</option>
+</Select>
+
+<p>Selected value: {selectedValue}</p>
+```

@@ -8,10 +8,10 @@ Coding standards, domain knowledge, and preferences that AI should follow.
 - just display the code snippet, and display description only when asked
 
 # Code Structure
+this codebase is a monorepo, the code is organized into apps and packages:
 /apps/* : runnable apps
 /apps/storybook: Storybook app for the React UI components
 /apps/svelte-docs : Svelte documentation app
-
 /packages/* : reusable packages
 /packages/core: Core style and shared utilities
 /packages/basic: React UI components

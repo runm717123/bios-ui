@@ -1,0 +1,173 @@
+---
+layout: _
+---
+
+# Installation
+
+Get started with BIOS UI Svelte components in your project.
+
+## Package Installation
+
+Install the BIOS UI Svelte package using your preferred package manager:
+
+### npm
+
+```bash
+npm install @bios-ui/svelte @bios-ui/core
+```
+
+### pnpm
+
+```bash
+pnpm add @bios-ui/svelte @bios-ui/core
+```
+
+### yarn
+
+```bash
+yarn add @bios-ui/svelte @bios-ui/core
+```
+
+## Setup
+
+### 1. Import Styles
+
+Import the core styles in your main app file or layout:
+
+```javascript
+// In your main.js or App.svelte
+import '@bios-ui/core/index.css';
+```
+
+### 2. Import Components
+
+Import components as needed in your Svelte files:
+
+```svelte
+<script>
+  import { Button, Input, Select } from '@bios-ui/svelte';
+</script>
+
+<Button>Click me</Button>
+<Input placeholder="Enter text..." />
+<Select>
+  <option value="">Choose an option</option>
+  <option value="1">Option 1</option>
+</Select>
+```
+
+### 3. TypeScript Support (Optional)
+
+If you're using TypeScript, the package includes full type definitions. No additional setup is required.
+
+## SvelteKit Setup
+
+For SvelteKit projects, add the styles import to your root layout:
+
+```svelte
+<!-- src/routes/+layout.svelte -->
+<script>
+  import '@bios-ui/core/index.css';
+  // Your other imports
+</script>
+
+<slot />
+```
+
+## Vite Configuration
+
+If you're using Vite, you may need to configure it to handle the package properly:
+
+```javascript
+// vite.config.js
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  plugins: [sveltekit()],
+  optimizeDeps: {
+    include: ['@bios-ui/svelte', '@bios-ui/core']
+  }
+});
+```
+
+## Available Components
+
+The package includes the following components:
+
+- **Button** - Clickable button with multiple sizes and states
+- **Input** - Text input field with validation support
+- **Select** - Dropdown selection component
+- **TextArea** - Multi-line text input
+- **Table** - Data table with semantic markup
+- **BodyText** - Standard body text typography
+- **BodyTextSmall** - Small body text for captions and labels
+- **InputLabel** - Accessible labels for form controls
+
+## Tree Shaking
+
+The package is built with tree shaking in mind. You can import only the components you need:
+
+```svelte
+<script>
+  // Import only what you need
+  import { Button } from '@bios-ui/svelte';
+  // or import specific components
+  import Button from '@bios-ui/svelte/Button.svelte';
+</script>
+```
+
+## CSS Custom Properties
+
+BIOS UI uses CSS custom properties (CSS variables) for theming. You can override these in your global styles:
+
+```css
+/* In your global CSS file */
+:root {
+  --bios-color-primary: #your-primary-color;
+  --bios-color-secondary: #your-secondary-color;
+  --bios-spacing-base: 1rem;
+  --bios-border-radius: 0.375rem;
+}
+```
+
+## Next Steps
+
+- Explore the [component documentation](/components/button) to learn about each component
+- Check out the design tokens in the core package
+- Review the TypeScript types for full API reference
+- Consider contributing to the project on GitHub
+
+## Troubleshooting
+
+### Styles Not Loading
+
+If component styles aren't applying correctly:
+
+1. Ensure you've imported `@bios-ui/core/index.css`
+2. Check that the import is in the correct order (before other styles)
+3. Verify your bundler is processing CSS files correctly
+
+### TypeScript Errors
+
+If you encounter TypeScript errors:
+
+1. Ensure you're using a compatible TypeScript version (4.0+)
+2. Check that your `tsconfig.json` includes the node_modules
+3. Try restarting your TypeScript server
+
+### Build Issues
+
+If you encounter build issues:
+
+1. Clear your node_modules and reinstall dependencies
+2. Check that your bundler supports Svelte files
+3. Ensure all peer dependencies are installed
+
+## Support
+
+Need help? Check out:
+
+- [GitHub Issues](https://github.com/your-repo/bios-ui/issues) for bug reports
+- [Documentation](/components/button) for component guides
+- [Contributing Guide](https://github.com/your-repo/bios-ui/blob/main/CONTRIBUTING.md) for development setup

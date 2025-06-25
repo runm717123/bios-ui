@@ -1,16 +1,9 @@
 <script lang="ts">
-	import type { HTMLLabelAttributes } from 'svelte/elements';
-	import type { Snippet } from 'svelte';
-
-	interface Props extends HTMLLabelAttributes {
-		children?: Snippet;
-	}
-
-	let { class: className = '', children, ...restProps }: Props = $props();
+	export let className: string = '';
 </script>
 
-<label class="bInputLabel {className}" {...restProps}>
-	{@render children?.()}
+<label class={`bInputLabel ${className}`} {...$$restProps}>
+	<slot />
 </label>
 
 <style>

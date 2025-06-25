@@ -1,19 +1,9 @@
 <script lang="ts">
-	import type { HTMLSelectAttributes } from 'svelte/elements';
-
-	export interface ISelectOptions {
-		value: string;
-		label: string;
-	}
-
-	interface Props extends HTMLSelectAttributes {
-		options: ISelectOptions[];
-	}
-
-	let { options, class: className = '', ...restProps }: Props = $props();
+	export let options: Array<{ label: string; value: string }>;
+	export let className: string = '';
 </script>
 
-<select class="bSelect {className}" {...restProps}>
+<select class={`bSelect ${className}`} {...$$restProps}>
 	<option value="">Select an option</option>
 	{#each options as { label, value } (value)}
 		<option {value}>{label}</option>

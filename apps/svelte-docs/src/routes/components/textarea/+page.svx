@@ -1,0 +1,183 @@
+---
+layout: _
+---
+
+<script>
+  import { TextArea, InputLabel } from '@bios-ui/svelte';
+</script>
+
+# TextArea
+
+A flexible textarea component for multi-line text input with support for different sizes, states, and accessibility features.
+
+## Default
+
+<div class="demo-container">
+  <TextArea placeholder="Enter your message..." />
+</div>
+
+```svelte
+<TextArea placeholder="Enter your message..." />
+```
+
+## With Label
+
+<div class="demo-container">
+  <div style="display: flex; flex-direction: column; gap: 0.5rem; max-width: 400px;">
+    <InputLabel for="message-textarea">Message</InputLabel>
+    <TextArea id="message-textarea" placeholder="Type your message here..." />
+  </div>
+</div>
+
+```svelte
+<InputLabel for="message-textarea">Message</InputLabel>
+<TextArea id="message-textarea" placeholder="Type your message here..." />
+```
+
+## Different Sizes
+
+<div class="demo-container">
+  <div style="display: flex; flex-direction: column; gap: 1rem;">
+    <div>
+      <p style="margin-bottom: 0.5rem; font-weight: 500;">Small (3 rows)</p>
+      <TextArea rows="3" placeholder="Small textarea..." />
+    </div>
+    <div>
+      <p style="margin-bottom: 0.5rem; font-weight: 500;">Medium (5 rows)</p>
+      <TextArea rows="5" placeholder="Medium textarea..." />
+    </div>
+    <div>
+      <p style="margin-bottom: 0.5rem; font-weight: 500;">Large (8 rows)</p>
+      <TextArea rows="8" placeholder="Large textarea..." />
+    </div>
+  </div>
+</div>
+
+```svelte
+<TextArea rows="3" placeholder="Small textarea..." />
+<TextArea rows="5" placeholder="Medium textarea..." />
+<TextArea rows="8" placeholder="Large textarea..." />
+```
+
+## States
+
+<div class="demo-container">
+  <div style="display: flex; flex-direction: column; gap: 1rem;">
+    <div>
+      <p style="margin-bottom: 0.5rem; font-weight: 500;">Default</p>
+      <TextArea placeholder="Default state..." />
+    </div>
+    <div>
+      <p style="margin-bottom: 0.5rem; font-weight: 500;">Disabled</p>
+      <TextArea placeholder="Disabled textarea..." disabled />
+    </div>
+    <div>
+      <p style="margin-bottom: 0.5rem; font-weight: 500;">Required</p>
+      <TextArea placeholder="Required field..." required />
+    </div>
+    <div>
+      <p style="margin-bottom: 0.5rem; font-weight: 500;">Read-only</p>
+      <TextArea value="This text cannot be edited..." readonly />
+    </div>
+  </div>
+</div>
+
+```svelte
+<TextArea placeholder="Default state..." />
+<TextArea placeholder="Disabled textarea..." disabled />
+<TextArea placeholder="Required field..." required />
+<TextArea value="This text cannot be edited..." readonly />
+```
+
+## With Pre-filled Content
+
+<div class="demo-container">
+  <TextArea value="This is some pre-filled content that can be edited by the user. You can replace this text with anything you like." />
+</div>
+
+```svelte
+<TextArea value="This is some pre-filled content that can be edited by the user. You can replace this text with anything you like." />
+```
+
+## Character Limits
+
+<div class="demo-container">
+  <div style="display: flex; flex-direction: column; gap: 1rem;">
+    <div>
+      <p style="margin-bottom: 0.5rem; font-weight: 500;">Limited to 100 characters</p>
+      <TextArea maxlength="100" placeholder="Type up to 100 characters..." />
+    </div>
+    <div>
+      <p style="margin-bottom: 0.5rem; font-weight: 500;">Minimum 10 characters</p>
+      <TextArea minlength="10" placeholder="Must be at least 10 characters..." />
+    </div>
+  </div>
+</div>
+
+```svelte
+<TextArea maxlength="100" placeholder="Type up to 100 characters..." />
+<TextArea minlength="10" placeholder="Must be at least 10 characters..." />
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `value` | `string` | `''` | The textarea value |
+| `placeholder` | `string` | `undefined` | Placeholder text |
+| `rows` | `number` | `4` | Number of visible text lines |
+| `cols` | `number` | `undefined` | Number of visible character widths |
+| `disabled` | `boolean` | `false` | Whether the textarea is disabled |
+| `readonly` | `boolean` | `false` | Whether the textarea is read-only |
+| `required` | `boolean` | `false` | Whether the textarea is required |
+| `maxlength` | `number` | `undefined` | Maximum character limit |
+| `minlength` | `number` | `undefined` | Minimum character limit |
+| `class` | `string` | `undefined` | Additional CSS classes |
+| `id` | `string` | `undefined` | The textarea ID |
+| `name` | `string` | `undefined` | The textarea name |
+| `wrap` | `'hard' \| 'soft'` | `'soft'` | How text wrapping is handled |
+
+## Accessibility
+
+- Uses semantic `<textarea>` element
+- Supports keyboard navigation
+- Works with screen readers
+- Can be associated with labels using `id` and `for` attributes
+- Supports all standard textarea attributes
+- Proper focus management
+- Follows WCAG 2.1 guidelines
+
+## Events
+
+The TextArea component forwards all standard textarea events:
+
+- `input`
+- `change`
+- `focus`
+- `blur`
+- `keydown`
+- `keyup`
+- `scroll`
+- And more...
+
+```svelte
+<script>
+  let textValue = '';
+  let charCount = 0;
+  
+  function handleInput(event) {
+    textValue = event.target.value;
+    charCount = textValue.length;
+  }
+</script>
+
+<TextArea 
+  bind:value={textValue}
+  on:input={handleInput}
+  on:focus={() => console.log('TextArea focused')}
+  on:blur={() => console.log('TextArea blurred')}
+  placeholder="Start typing..."
+/>
+
+<p>Character count: {charCount}</p>
+```

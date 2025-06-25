@@ -1,16 +1,9 @@
 <script lang="ts">
-	import type { HTMLTableAttributes } from 'svelte/elements';
-	import type { Snippet } from 'svelte';
-
-	interface Props extends HTMLTableAttributes {
-		children?: Snippet;
-	}
-
-	let { class: className = '', children, ...restProps }: Props = $props();
+	export let className: string = '';
 </script>
 
-<table class="bTable {className}" {...restProps}>
-	{@render children?.()}
+<table class={`bTable ${className}`} {...$$restProps}>
+	<slot />
 </table>
 
 <style>

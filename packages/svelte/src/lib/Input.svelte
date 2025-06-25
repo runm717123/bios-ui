@@ -1,13 +1,8 @@
 <script lang="ts">
-	import type { HTMLInputAttributes } from 'svelte/elements';
-
-	interface Props extends HTMLInputAttributes {
-	}
-
-	let { class: className = '', ...restProps }: Props = $props();
+	export let className: string = '';
 </script>
 
-<input class="bInput {className}" {...restProps} />
+<input class={`bInput ${className}`} {...$$restProps} />
 
 <style>
 	.bInput {

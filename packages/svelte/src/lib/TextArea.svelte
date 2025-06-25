@@ -1,13 +1,8 @@
 <script lang="ts">
-	import type { HTMLTextareaAttributes } from 'svelte/elements';
-
-	interface Props extends HTMLTextareaAttributes {
-	}
-
-	let { class: className = '', ...restProps }: Props = $props();
+	export let className: string = '';
 </script>
 
-<textarea class="bTextArea {className}" {...restProps}></textarea>
+<textarea class={`bTextArea ${className}`} {...$$restProps}></textarea>
 
 <style>
 	.bTextArea {
