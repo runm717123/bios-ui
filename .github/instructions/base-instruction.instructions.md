@@ -8,24 +8,20 @@ Coding standards, domain knowledge, and preferences that AI should follow.
 - just display the code snippet, and display description only when asked
 
 # Code Structure
-- apps
-  
- # demo app for the UI components
- - storybook
-- packages
+/apps/* : runnable apps
+/apps/storybook: Storybook app for the React UI components
+/apps/svelte-docs : Svelte documentation app
 
-  # UI components
-  - @bios-ui/core
-  # react components
-  - @bios-ui/basic
-  # svelte components
-  - @bios-ui/svelte
+/packages/* : reusable packages
+/packages/core: Core style and shared utilities
+/packages/basic: React UI components
+/packages/svelte: Svelte UI components
 
 # Coding Standards and Preferences
 ## General Coding Standards
 - prefix className with b, example: `bButton`, `bCard`
 - when applying a class to an element, use the `className` prop with cx, example: `className={cx(bButton, className)}`
-- when creating components, always use interface for props, and extending respective HTML element props, example:
+- when creating react components, always use interface for props, and extending respective HTML element props, example:
 ```typescript
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   // custom props
