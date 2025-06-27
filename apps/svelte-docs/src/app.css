@@ -1,209 +1,80 @@
-@import '@bios-ui/core/index.css';
+@import 'tailwindcss';
+@import 'tailwindcss/preflight';
+@tailwind utilities;
+@import '@bios-ui/core/tw';
 
-/* Global styles for the documentation app */
-:root {
-	--sidebar-width: 280px;
-	--header-height: 60px;
-}
+/* Custom components using @apply directive */
+@layer components {
+	.bDemo-container {
+		@apply bg-white rounded-lg p-8 mb-6 border border-gray-200 shadow-sm;
+	}
+	
+	.bDemo-grid {
+		@apply grid grid-cols-1 md:grid-cols-3 gap-4 items-center;
+	}
+	
+	.bDemo-item {
+		@apply flex flex-col items-center gap-2 p-4;
+	}
+	
+	.bDemo-label {
+		@apply text-sm text-gray-600 text-center;
+	}
+	
+	.bCustom-button {
+		@apply bg-purple-600 hover:bg-purple-700 text-white;
+	}
 
-* {
-	box-sizing: border-box;
-}
+	.bDocs-prose {
+		@apply max-w-none;
+	}
 
-body {
-	margin: 0;
-	font-family: var(--font-family-base);
-	background-color: var(--color-bg-light);
-	color: var(--color-fg-dark);
-}
+	.bDocs-prose h1 {
+		@apply text-4xl font-bold mb-4 text-gray-900 border-b-2 border-gray-200 pb-2;
+	}
 
-/* Layout styles */
-.bDocs-layout {
-	display: flex;
-	height: 100vh;
-}
+	.bDocs-prose h2 {
+		@apply text-3xl font-semibold mt-8 mb-4 text-gray-800;
+	}
 
-.bDocs-sidebar {
-	width: var(--sidebar-width);
-	background: var(--color-bg-white);
-	border-right: 1px solid var(--color-border-light);
-	overflow-y: auto;
-	flex-shrink: 0;
-}
+	.bDocs-prose h3 {
+		@apply text-2xl font-medium mt-6 mb-3 text-gray-700;
+	}
 
-.bDocs-main {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-}
+	.bDocs-prose p {
+		@apply mb-4 leading-relaxed text-gray-700;
+	}
 
-.bDocs-header {
-	height: var(--header-height);
-	background: var(--color-bg-white);
-	border-bottom: 1px solid var(--color-border-light);
-	display: flex;
-	align-items: center;
-	padding: 0 2rem;
-	flex-shrink: 0;
-}
+	.bDocs-prose ul {
+		@apply mb-4 pl-6 space-y-2;
+	}
 
-.bDocs-content {
-	flex: 1;
-	overflow-y: auto;
-	padding: 2rem;
-}
+	.bDocs-prose li {
+		@apply leading-relaxed;
+	}
 
-/* Sidebar styles */
-.bDocs-nav {
-	padding: 1.5rem 0;
-}
+	.bDocs-prose table {
+		@apply w-full border-collapse my-6;
+	}
 
-.bDocs-nav-title {
-	padding: 0 1.5rem 1rem;
-	font-size: var(--font-size-lg);
-	font-weight: 600;
-	color: var(--color-fg-dark);
-	margin: 0;
-}
+	.bDocs-prose th,
+	.bDocs-prose td {
+		@apply px-3 py-2 text-left border-b border-gray-200;
+	}
 
-.bDocs-nav-section {
-	margin-bottom: 1.5rem;
-}
+	.bDocs-prose th {
+		@apply bg-gray-50 font-semibold;
+	}
 
-.bDocs-nav-section-title {
-	padding: 0.5rem 1.5rem;
-	font-size: var(--font-size-sm);
-	font-weight: 600;
-	color: var(--color-fg-medium);
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
-	margin: 0 0 0.5rem 0;
-}
+	.bDocs-prose code {
+		@apply bg-gray-100 px-1 py-0.5 rounded text-sm font-mono;
+	}
 
-.bDocs-nav-link {
-	display: block;
-	padding: 0.5rem 1.5rem;
-	color: var(--color-fg-dark);
-	text-decoration: none;
-	font-size: var(--font-size-base);
-	transition: background-color 0.2s;
-}
+	.bDocs-prose pre {
+		@apply bg-gray-50 border border-gray-200 rounded-md p-4 overflow-x-auto my-4;
+	}
 
-.bDocs-nav-link:hover {
-	background-color: var(--color-bg-light);
-}
-
-.bDocs-nav-link.active {
-	background-color: var(--color-primary-light);
-	color: var(--color-primary-dark);
-	font-weight: 500;
-}
-
-/* Component showcase styles */
-.bDocs-component {
-	margin-bottom: 3rem;
-}
-
-.bDocs-component-title {
-	font-size: var(--font-size-xl);
-	font-weight: 600;
-	margin: 0 0 1rem 0;
-	color: var(--color-fg-dark);
-}
-
-.bDocs-component-description {
-	font-size: var(--font-size-base);
-	color: var(--color-fg-medium);
-	margin: 0 0 2rem 0;
-	line-height: 1.6;
-}
-
-.bDocs-story {
-	margin-bottom: 2rem;
-}
-
-.bDocs-story-title {
-	font-size: var(--font-size-lg);
-	font-weight: 500;
-	margin: 0 0 1rem 0;
-	color: var(--color-fg-dark);
-}
-
-.bDocs-story-canvas {
-	background: var(--color-bg-white);
-	border: 1px solid var(--color-border-light);
-	border-radius: 8px;
-	padding: 2rem;
-	margin-bottom: 1rem;
-}
-
-.bDocs-story-code {
-	background: var(--color-bg-dark);
-	color: var(--color-fg-light);
-	padding: 1rem;
-	border-radius: 8px;
-	font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-	font-size: var(--font-size-sm);
-	overflow-x: auto;
-}
-
-.bDocs-story-code pre {
-	margin: 0;
-}
-
-/* Component grid for multiple examples */
-.bDocs-component-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	gap: 1rem;
-	margin-bottom: 1rem;
-}
-
-.bDocs-component-grid-item {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 0.5rem;
-	padding: 1rem;
-}
-
-.bDocs-component-grid-label {
-	font-size: var(--font-size-sm);
-	color: var(--color-fg-medium);
-	text-align: center;
-}
-
-/* Props table */
-.bDocs-props-table {
-	width: 100%;
-	border-collapse: collapse;
-	margin-top: 2rem;
-}
-
-.bDocs-props-table th,
-.bDocs-props-table td {
-	text-align: left;
-	padding: 0.75rem;
-	border-bottom: 1px solid var(--color-border-light);
-}
-
-.bDocs-props-table th {
-	background: var(--color-bg-light);
-	font-weight: 600;
-	font-size: var(--font-size-sm);
-	color: var(--color-fg-dark);
-}
-
-.bDocs-props-table td {
-	font-size: var(--font-size-sm);
-	color: var(--color-fg-medium);
-}
-
-.bDocs-props-table code {
-	background: var(--color-bg-light);
-	padding: 0.2rem 0.4rem;
-	border-radius: 4px;
-	font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-	font-size: 0.875em;
+	.bDocs-prose pre code {
+		@apply bg-transparent p-0;
+	}
 }

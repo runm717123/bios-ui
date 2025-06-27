@@ -1,0 +1,105 @@
+<div class="max-w-4xl">
+  <div class="mb-8">
+    <h1 class="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">Getting Started</h1>
+    <p class="text-xl text-slate-600 leading-relaxed">Install and set up BIOS UI Svelte components in your project.</p>
+  </div>
+
+  <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-slate-200/60 mb-8">
+    <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+      <div class="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+        <span class="text-white text-sm">📦</span>
+      </div>
+      Installation
+    </h2>
+
+    <p class="text-slate-600 mb-6">Install the BIOS UI Svelte package using your preferred package manager:</p>
+
+    <div class="space-y-4">
+      <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
+        <h3 class="text-sm font-semibold text-slate-700 mb-2">npm</h3>
+        <code class="text-slate-800 font-mono">npm install @bios-ui/svelte-v2 @bios-ui/core</code>
+      </div>
+
+      <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
+        <h3 class="text-sm font-semibold text-slate-700 mb-2">pnpm</h3>
+        <code class="text-slate-800 font-mono">pnpm add @bios-ui/svelte-v2 @bios-ui/core</code>
+      </div>
+
+      <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
+        <h3 class="text-sm font-semibold text-slate-700 mb-2">yarn</h3>
+        <code class="text-slate-800 font-mono">yarn add @bios-ui/svelte-v2 @bios-ui/core</code>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-slate-200/60">
+    <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+      <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center">
+        <span class="text-white text-sm">⚙️</span>
+      </div>
+      Setup
+    </h2>
+
+    <div class="space-y-6">
+      <div>
+        <h3 class="text-lg font-semibold text-slate-700 mb-3">Import Styles</h3>
+        <p class="text-slate-600 mb-4">Import the core styles in your main app file:</p>
+        <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
+          <code class="text-slate-800 font-mono text-sm">
+// In your main.js or App.svelte<br/>
+import '@bios-ui/core/index.css';
+          </code>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold text-slate-700 mb-3">Import Components</h3>
+        <p class="text-slate-600 mb-4">Import and use components in your Svelte files:</p>
+        <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
+          <code class="text-slate-800 font-mono text-sm">
+import &#123; Button &#125; from '@bios-ui/svelte-v2';<br/><br/>
+&lt;Button&gt;Click me&lt;/Button&gt;
+          </code>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <ol>
+    <li>Ensure you've imported <code>@bios-ui/core/index.css</code></li>
+    <li>Check that the import is in the correct order (before other styles)</li>
+    <li>Verify your bundler is processing CSS files correctly</li>
+  </ol>
+
+  <h3>TypeScript Errors</h3>
+
+  <p>If you encounter TypeScript errors:</p>
+
+  <ol>
+    <li>Ensure you're using a compatible TypeScript version (4.0+)</li>
+    <li>Check that your <code>tsconfig.json</code> includes the node_modules</li>
+    <li>Try restarting your TypeScript server</li>
+  </ol>
+
+  <h3>Build Issues</h3>
+
+  <p>If you encounter build issues:</p>
+
+  <ol>
+    <li>Clear your node_modules and reinstall dependencies</li>
+    <li>Check that your bundler supports Svelte files</li>
+    <li>Ensure all peer dependencies are installed</li>
+  </ol>
+
+  <h2>Support</h2>
+
+  <p>Need help? Check out:</p>
+
+  <ul>
+    <li><a href="https://github.com/your-repo/bios-ui/issues" class="text-blue-600 hover:text-blue-800">GitHub Issues</a> for bug reports</li>
+    <li><a href="/components/button" class="text-blue-600 hover:text-blue-800">Documentation</a> for component guides</li>
+    <li><a href="https://github.com/your-repo/bios-ui/blob/main/CONTRIBUTING.md" class="text-blue-600 hover:text-blue-800">Contributing Guide</a> for development setup</li>
+  </ul>
+</div>

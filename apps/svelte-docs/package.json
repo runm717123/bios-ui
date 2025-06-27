@@ -18,7 +18,9 @@
 	"dependencies": {
 		"@bios-ui/core": "workspace:*",
 		"@bios-ui/svelte": "workspace:*",
-		"@bios-ui/svelte-v2": "workspace:*"
+		"@bios-ui/svelte-v2": "workspace:*",
+		"@tailwindcss/vite": "^4.1.11",
+		"tailwindcss": "^4.1.11"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
@@ -31,7 +33,6 @@
 		"eslint-config-prettier": "^10.0.1",
 		"eslint-plugin-svelte": "^3.0.0",
 		"globals": "^16.0.0",
-		"mdsvex": "^0.12.3",
 		"playwright": "^1.53.0",
 		"prettier": "^3.4.2",
 		"prettier-plugin-svelte": "^3.3.3",
