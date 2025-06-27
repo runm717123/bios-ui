@@ -45,9 +45,16 @@
 		"index.css"
 	],
 	"main": "index.css",
+	"exports": {
+		".": {
+			"import": "./index.css"
+		},
+		"./css": "./index.css",
+		"./tw": "./tokens/tw.css"
+	},
 	"sideEffects": [
 		"dist/bios-ui.css",
-		"tokens/generated.css",
+		"tokens/*.css",
 		"index.css"
 	]
 }
