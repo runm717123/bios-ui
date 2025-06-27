@@ -3,7 +3,7 @@ layout: _
 ---
 
 <script>
-  import { Button } from '@bios-ui/svelte';
+  import { Button } from '@bios-ui/svelte-v2';
 </script>
 
 # Button
@@ -50,7 +50,7 @@ A versatile button component that supports different sizes and can be customized
 <div class="demo-container">
   <div class="demo-grid">
     <div class="demo-item">
-      <Button>Default</Button>
+      <button class="bButton">Default</button>
       <span class="demo-label">Default</span>
     </div>
     <div class="demo-item">
