@@ -1,4 +1,6 @@
-{
+import './tailwind-theme-format.js'
+
+export default {
 	"source": ["tokens/**/*.json"],
 	"platforms": {
 		"css": {
@@ -8,6 +10,10 @@
 				{
 					"destination": "generated.css",
 					"format": "css/variables"
+				},
+				{
+					"destination": "tw.css",
+					"format": 'css/tailwind-theme'
 				}
 			]
 		}

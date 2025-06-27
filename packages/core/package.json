@@ -1,7 +1,7 @@
 {
 	"name": "@bios-ui/core",
 	"type": "module",
-	"version": "0.0.9",
+	"version": "0.0.10",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/runm717123/bios-ui.git"
@@ -14,7 +14,7 @@
 		"build": "pnpm build:sd && pnpm build:css",
 		"pub": "pnpm publish --access public --no-git-checks",
 		"build:css": "vite build",
-		"build:sd": "style-dictionary build --config style-dictionary.config.json --verbose",
+		"build:sd": "style-dictionary build --config style-dictionary.config.js --verbose",
 		"dev": "nodemon --watch src --exec \"node build-on-change.js\""
 	},
 	"nodemonConfig": {
@@ -41,7 +41,7 @@
 	},
 	"files": [
 		"dist/bios-ui.css",
-		"tokens/generated.css",
+		"tokens/*.css",
 		"index.css"
 	],
 	"main": "index.css",
