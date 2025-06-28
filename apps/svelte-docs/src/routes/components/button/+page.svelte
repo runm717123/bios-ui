@@ -11,19 +11,16 @@
 	</div>
 
 	<!-- Preview Section -->
-	<div class="bg-bg-darker text-secondary rounded-2xl p-8 shadow-lg border border-slate-200/60 mb-8">
-		<div class="bg-bg-dark flex items-center justify-center rounded-xl p-8 border border-slate-200/60">
+	<div
+		class="bg-bg-darker text-secondary rounded-2xl p-8 shadow-lg border border-slate-200/60 mb-8"
+	>
+		<div
+			class="bg-bg-dark flex items-center justify-center rounded-xl p-8 border border-slate-200/60"
+		>
 			<Button size="medium">Click me</Button>
 		</div>
 
-		<h2 class="text-2xl font-bold text-fg-dark mb-6 flex items-center gap-3 mt-6">
-			<div class="w-8 h-8 bg-fg-dark rounded-lg flex items-center justify-center">
-				<span class="text-white text-sm">⚙️</span>
-			</div>
-			Props
-		</h2>
-
-		<div class="overflow-hidden rounded-xl border border-slate-200">
+		<div class="overflow-hidden rounded-xl border border-slate-200 mt-5">
 			<table class="w-full">
 				<thead class="bg-slate-50">
 					<tr>
