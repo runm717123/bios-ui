@@ -1,6 +1,10 @@
 @import 'tailwindcss';
 @import '@bios-ui/core/tw';
 
+@theme {
+	--color-secondary: #8FA3C8;
+}
+
 /* Custom components using @apply directive */
 @layer components {
 	.bDemo-container {

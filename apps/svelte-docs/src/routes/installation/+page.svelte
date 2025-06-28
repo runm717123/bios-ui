@@ -1,7 +1,7 @@
 <div class="max-w-4xl">
   <div class="mb-8">
     <h1 class="text-5xl font-bold bg-fg-dark bg-clip-text text-transparent mb-4">Getting Started</h1>
-    <p class="text-xl text-slate-600 leading-relaxed">Install and set up BIOS UI Svelte components in your project.</p>
+    <p class="text-xl text-secondary leading-relaxed">Install and set up BIOS UI Svelte components in your project.</p>
   </div>
 
   <div class="bg-bg-dark backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-slate-200/60 mb-8">
