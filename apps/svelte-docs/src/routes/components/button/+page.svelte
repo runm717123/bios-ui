@@ -10,7 +10,6 @@
 		</p>
 	</div>
 
-	<!-- Preview Section -->
 	<div
 		class="bg-bg-darker text-secondary rounded-2xl p-8 shadow-lg border border-slate-200/60 mb-8"
 	>
@@ -21,27 +20,27 @@
 		</div>
 
 		<div class="overflow-hidden rounded-xl border border-slate-200 mt-5">
-			<table class="w-full">
-				<thead class="bg-slate-50">
+			<table class="table-v2">
+				<thead>
 					<tr>
-						<th class="px-6 py-4 text-left text-sm font-semibold text-slate-700">Prop</th>
-						<th class="px-6 py-4 text-left text-sm font-semibold text-slate-700">Type</th>
-						<th class="px-6 py-4 text-left text-sm font-semibold text-slate-700">Default</th>
-						<th class="px-6 py-4 text-left text-sm font-semibold text-slate-700">Description</th>
+						<th>Prop</th>
+						<th>Type</th>
+						<th>Default</th>
+						<th>Description</th>
 					</tr>
 				</thead>
-				<tbody class="bg-white divide-y divide-slate-200">
+				<tbody>
 					<tr>
-						<td class="px-6 py-4 text-sm font-mono text-slate-800">size</td>
-						<td class="px-6 py-4 text-sm text-slate-600">'small' | 'medium' | 'large'</td>
-						<td class="px-6 py-4 text-sm font-mono text-slate-800">'medium'</td>
-						<td class="px-6 py-4 text-sm text-slate-600">Controls the size of the button</td>
+						<td>size</td>
+						<td>'small' | 'medium' | 'large'</td>
+						<td>'medium'</td>
+						<td>Controls the size of the button</td>
 					</tr>
 					<tr>
-						<td class="px-6 py-4 text-sm font-mono text-slate-800">className</td>
-						<td class="px-6 py-4 text-sm text-slate-600">string</td>
-						<td class="px-6 py-4 text-sm font-mono text-slate-800">''</td>
-						<td class="px-6 py-4 text-sm text-slate-600">Additional CSS classes to apply</td>
+						<td>className</td>
+						<td>string</td>
+						<td>''</td>
+						<td>Additional CSS classes to apply</td>
 					</tr>
 				</tbody>
 			</table>

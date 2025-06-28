@@ -2,7 +2,7 @@
 @import '@bios-ui/core/tw';
 
 @theme {
-	--color-secondary: #8FA3C8;
+	--color-secondary: #8fa3c8;
 }
 
 /* Custom components using @apply directive */
@@ -87,4 +87,30 @@
 	background-image:
 		linear-gradient(to bottom, #1a1a1a 1px, transparent 1px),
 		linear-gradient(to right, #1a1a1a 1px, transparent 1px);
+}
+
+.table-v2 {
+	width: 100%;
+	@apply text-slate-600 text-sm;
+	td, th {
+		@apply px-6 py-4;
+	}
+	thead {
+		@apply bg-slate-50;
+		th {
+			@apply text-left font-semibold text-slate-700;
+		}
+	}
+
+	tbody {
+		@apply bg-white divide-y divide-slate-200;
+	}
+
+	td {
+		@apply font-mono text-slate-600;
+	}
+
+	tr td:nth-child(odd) {
+		@apply text-slate-800;
+	}
 }
