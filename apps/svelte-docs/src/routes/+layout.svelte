@@ -28,12 +28,12 @@
 <div class="h-screen flex flex-row page-container">
 	<!-- Mobile hamburger button -->
 	<button
-		class="fixed top-4 left-4 z-50 p-2 rounded-lg bg-white shadow-lg border border-slate-200 md:hidden"
+		class="fixed top-4 left-4 z-50 p-2 rounded-lg bg-white shadow-lg border border-fg-dark md:hidden"
 		on:click={toggleSidebar}
 		aria-label="Toggle sidebar"
 	>
 		<svg
-			class="w-6 h-6 text-slate-700"
+			class="w-6 h-6 text-black"
 			fill="none"
 			stroke="currentColor"
 			viewBox="0 0 24 24"
@@ -60,39 +60,39 @@
 	{/if}
 
 	<aside
-		class="w-72 bg-bg-dark shadow-xl border-r border-slate-200/60 h-full overflow-y-auto p-8 
+		class="w-72 bg-bg-dark shadow-xl border-r border-fg-dark h-full overflow-y-auto p-8 
 		       fixed md:static z-40 transform transition-transform duration-300 ease-in-out
 		       {isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0"
 	>
 		<div class="flex items-center gap-3 mb-10">
 			<div
-				class="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center"
+				class="w-10 h-10 bg-bg-dark border-1 border-fg-dark rounded-lg flex items-center justify-center"
 			>
 				<span class="text-white font-bold text-lg">B</span>
 			</div>
 			<div>
 				<h1
-					class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+					class="text-2xl font-bold text-fg-dark"
 				>
 					BIOS UI
 				</h1>
-				<p class="text-sm text-slate-500">Svelte Components</p>
+				<p class="text-sm text-white">Svelte Components</p>
 			</div>
 		</div>
 
 		{#each navigation as section}
 			<div class="mb-8 bg-bg-dark">
-				<h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4 px-3">
+				<h2 class="font-bold text-white uppercase tracking-wider mb-4 px-3">
 					{section.title}
 				</h2>
 				<div class="space-y-1">
 					{#each section.items as item}
 						<a
 							href={item.href}
-							class="block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 {$page
+							class="block px-4 py-1 rounded-xl text-sm font-medium transition-all duration-200 hover:bg-fg-dark {$page
 								.url.pathname === item.href
-								? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-200'
-								: 'text-slate-700 hover:bg-slate-100 hover:text-slate-900 hover:translate-x-1'}"
+								? 'bg-fg-dark text-white pl-6'
+								: 'text-white'}"
 							on:click={closeSidebar}
 						>
 							{item.name}

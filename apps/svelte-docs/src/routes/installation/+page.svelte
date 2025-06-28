@@ -1,18 +1,18 @@
 <div class="max-w-4xl">
   <div class="mb-8">
-    <h1 class="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">Getting Started</h1>
+    <h1 class="text-5xl font-bold bg-fg-dark bg-clip-text text-transparent mb-4">Getting Started</h1>
     <p class="text-xl text-slate-600 leading-relaxed">Install and set up BIOS UI Svelte components in your project.</p>
   </div>
 
-  <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-slate-200/60 mb-8">
-    <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
-      <div class="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+  <div class="bg-bg-dark backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-slate-200/60 mb-8">
+    <h2 class="text-2xl font-bold text-fg-dark mb-6 flex items-center gap-3">
+      <div class="w-8 h-8 bg-fg-dark rounded-lg flex items-center justify-center">
         <span class="text-white text-sm">📦</span>
       </div>
       Installation
     </h2>
 
-    <p class="text-slate-600 mb-6">Install the BIOS UI Svelte package using your preferred package manager:</p>
+    <p class="text-fg-dark mb-6">Install the BIOS UI Svelte package using your preferred package manager:</p>
 
     <div class="space-y-4">
       <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
