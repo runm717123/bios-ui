@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import '../app.css';
+import '../app.css';
+import '@bios-ui/core/css';
 
 	const navigation = [
 		{
@@ -16,8 +17,8 @@
 	];
 </script>
 
-<div class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-	<aside class="w-72 bg-white/80 backdrop-blur-sm shadow-xl border-r border-slate-200/60 fixed h-full overflow-y-auto z-10">
+<div class="min-h-screen flex flex-row page-container">
+	<aside class="w-72 bg-bg-dark backdrop-blur-sm shadow-xl border-r border-slate-200/60 h-screen overflow-y-auto">
 		<div class="p-8">
 			<div class="flex items-center gap-3 mb-10">
 				<div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -30,7 +31,7 @@
 			</div>
 
 			{#each navigation as section}
-				<div class="mb-8">
+				<div class="mb-8 bg-bg-dark">
 					<h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4 px-3">
 						{section.title}
 					</h2>
