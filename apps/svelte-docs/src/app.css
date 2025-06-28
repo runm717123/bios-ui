@@ -7,78 +7,7 @@
 
 /* Custom components using @apply directive */
 @layer components {
-	.bDemo-container {
-		@apply bg-white rounded-lg p-8 mb-6 border border-gray-200 shadow-sm;
-	}
 
-	.bDemo-grid {
-		@apply grid grid-cols-1 md:grid-cols-3 gap-4 items-center;
-	}
-
-	.bDemo-item {
-		@apply flex flex-col items-center gap-2 p-4;
-	}
-
-	.bDemo-label {
-		@apply text-sm text-gray-600 text-center;
-	}
-
-	.bCustom-button {
-		@apply bg-purple-600 hover:bg-purple-700 text-white;
-	}
-
-	.bDocs-prose {
-		@apply max-w-none;
-	}
-
-	.bDocs-prose h1 {
-		@apply text-4xl font-bold mb-4 text-gray-900 border-b-2 border-gray-200 pb-2;
-	}
-
-	.bDocs-prose h2 {
-		@apply text-3xl font-semibold mt-8 mb-4 text-gray-800;
-	}
-
-	.bDocs-prose h3 {
-		@apply text-2xl font-medium mt-6 mb-3 text-gray-700;
-	}
-
-	.bDocs-prose p {
-		@apply mb-4 leading-relaxed text-gray-700;
-	}
-
-	.bDocs-prose ul {
-		@apply mb-4 pl-6 space-y-2;
-	}
-
-	.bDocs-prose li {
-		@apply leading-relaxed;
-	}
-
-	.bDocs-prose table {
-		@apply w-full border-collapse my-6;
-	}
-
-	.bDocs-prose th,
-	.bDocs-prose td {
-		@apply px-3 py-2 text-left border-b border-gray-200;
-	}
-
-	.bDocs-prose th {
-		@apply bg-gray-50 font-semibold;
-	}
-
-	.bDocs-prose code {
-		@apply bg-gray-100 px-1 py-0.5 rounded text-sm font-mono;
-	}
-
-	.bDocs-prose pre {
-		@apply bg-gray-50 border border-gray-200 rounded-md p-4 overflow-x-auto my-4;
-	}
-
-	.bDocs-prose pre code {
-		@apply bg-transparent p-0;
-	}
 }
 
 .page-container {
