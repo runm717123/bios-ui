@@ -1,7 +1,8 @@
 {
 	"color": {
 		"bg": {
-			"dark": { "value": "#000b25", "type": "color" }
+			"dark": { "value": "#000b25", "type": "color" },
+			"darker": { "value": "#000b1a", "type": "color" }
 		},
 		"fg": {
 			"dark": { "value": "#1e82dd", "type": "color" }
