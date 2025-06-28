@@ -5,15 +5,42 @@
 
 <div class="max-w-4xl">
 	<div class="mb-8">
-		<h1 class="text-5xl font-bold color-fg-dark mb-4">
-			Getting Started
-		</h1>
+		<h1 class="text-5xl font-bold color-fg-dark mb-4">Getting Started</h1>
 		<p class="text-xl text-secondary leading-relaxed">
 			Install and set up BIOS UI Svelte components in your project.
 		</p>
 	</div>
 
-	<ContentBlock title={{ icon: '📦', text: 'Installation' }}>
+	<ContentBlock title={{ icon: '�', text: 'Requirements' }}>
+		<p class="mb-6">
+			BIOS UI Svelte components are designed for simplicity and don't require complex setup. Make
+			sure you have the following in your project:
+		</p>
+
+		<ul class="space-y-3 mb-6">
+			<li class="flex items-center gap-3">
+				<div class="w-2 h-2 bg-green-500 rounded-full"></div>
+				<span><strong>Svelte 5:</strong> Latest version of Svelte framework</span>
+			</li>
+			<li class="flex items-center gap-3">
+				<div class="w-2 h-2 bg-green-500 rounded-full"></div>
+				<span><strong>Tailwind CSS 4:</strong> For styling and utility classes</span>
+			</li>
+			<li class="flex items-center gap-3">
+				<div class="w-2 h-2 bg-green-500 rounded-full"></div>
+				<span><strong>@bios-ui/core:</strong> Latest version of the core design system</span>
+			</li>
+		</ul>
+
+		<div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded">
+			<p class="text-blue-800">
+				<strong>Note:</strong> No additional build tools or complex configuration required. BIOS UI components
+				work out of the box with standard Svelte and Tailwind setups.
+			</p>
+		</div>
+	</ContentBlock>
+
+	<ContentBlock title={{ icon: '�📦', text: 'Installation' }}>
 		<p class="mb-6">Install the BIOS UI Svelte package using your preferred package manager:</p>
 
 		<div class="space-y-4">
@@ -30,8 +57,19 @@
 				<h3 class="text-lg font-semibold text-secondary mb-3">Import Styles</h3>
 				<p class="text-secondary mb-4">Import the core styles in your main app file:</p>
 				<BasicScript
-					code="// In your main.js or App.svelte&#10;import '@bios-ui/core/index.css';"
+				title="+layout.svelte"
+					code="import '@bios-ui/core/index.css';"
 				/>
+			</div>
+
+			<div>
+				<h3 class="text-lg font-semibold text-secondary mb-3">Inject Tailwind Theme</h3>
+				<p class="text-secondary mb-4">
+					To inject the tailwind theme with core design tokens just after your tailwind import:
+				</p>
+				<BasicScript title="app.css" code="@import '@bios-ui/core/tw';" />
+				<p class="my-4">this way you can use the design tokens with tailwind classes</p>
+				<BasicScript code="<div class='bg-bg-dark'>your content</div>" />
 			</div>
 
 			<div>
