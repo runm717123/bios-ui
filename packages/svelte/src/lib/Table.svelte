@@ -10,6 +10,16 @@
 	let { className = '', children, ...restProps }: Props = $props();
 </script>
 
-<table class={`border-collapse [&_td]:border [&_td]:border-fg-dark [&_th]:border [&_th]:border-fg-dark border border-fg-dark ${className}`} {...restProps}>
+<table
+	class={`b-table border-collapse [&_td]:border [&_td]:border-fg-dark [&_th]:border [&_th]:border-fg-dark border border-fg-dark ${className}`}
+	{...restProps}
+>
 	{@render children?.()}
 </table>
+
+<style>
+	:global(.b-table td),
+	:global(.b-table th) {
+		padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+	}
+</style>
