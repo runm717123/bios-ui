@@ -1,21 +1,12 @@
 <script>
-	import { codeToHtml } from '$lib/utils/shiki';
-	import { TextArea } from '@bios-ui/svelte';
 	import CodeScript from '$lib/docs/code-script.svelte';
-
-	let highlightedCode = $state('');
-
-	const codeExample = `<` + `script>
 	import { TextArea } from '@bios-ui/svelte';
-</` + `script>
+
+	const codeExample = `<script>
+	import { TextArea } from '@bios-ui/svelte';
+<\/script>
 
 <TextArea placeholder="Enter your message here..." rows="4" cols="30" />`;
-
-	$effect(() => {
-		codeToHtml(codeExample).then((html) => {
-			highlightedCode = html;
-		});
-	});
 </script>
 
 <div class="max-w-4xl">
@@ -35,9 +26,8 @@
 			<TextArea placeholder="Enter your message here..." rows="4" cols="30" />
 		</div>
 
-		<!-- Code Example Section -->
 		<div class="mt-6">
-			<CodeScript {highlightedCode} {codeExample} />
+			<CodeScript scripts={codeExample}/>
 		</div>
 
 		<div class="overflow-hidden rounded-xl border border-slate-200 mt-5">
@@ -63,8 +53,8 @@
 
 		<div class="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-xl">
 			<p class="text-sm text-blue-700">
-				<strong>Note:</strong> The TextArea component also accepts all standard HTML textarea attributes
-				via <code class="bg-blue-100 px-1 py-0.5 rounded font-mono">$$restProps</code>.
+				<strong>Note:</strong> The TextArea component also accepts all standard HTML textarea
+				attributes via <code class="bg-blue-100 px-1 py-0.5 rounded font-mono">$$restProps</code>.
 			</p>
 		</div>
 	</div>

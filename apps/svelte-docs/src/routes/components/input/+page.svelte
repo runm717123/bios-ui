@@ -1,24 +1,15 @@
 <script>
-	import { codeToHtml } from '$lib/utils/shiki';
-	import { Input, InputLabel } from '@bios-ui/svelte';
 	import CodeScript from '$lib/docs/code-script.svelte';
-
-	let highlightedCode = $state('');
-
-	const codeExample = `<` + `script>
 	import { Input, InputLabel } from '@bios-ui/svelte';
-</` + `script>
+
+	const codeExample = `<script>
+	import { Input, InputLabel } from '@bios-ui/svelte';
+<\/script>
 
 <InputLabel>
   Field Label
   <Input placeholder="Enter text here..." />
 </InputLabel>`;
-
-	$effect(() => {
-		codeToHtml(codeExample).then((html) => {
-			highlightedCode = html;
-		});
-	});
 </script>
 
 <div class="max-w-4xl">
@@ -36,14 +27,14 @@
 			class="bg-bg-dark flex items-center justify-center rounded-xl p-8 border border-slate-200/60"
 		>
 			<InputLabel>
-        Field Label
+				Field Label
 				<Input placeholder="Enter text here..." />
 			</InputLabel>
 		</div>
 
 		<!-- Code Example Section -->
 		<div class="mt-6">
-			<CodeScript {highlightedCode} {codeExample} />
+			<CodeScript scripts={codeExample} />
 		</div>
 
 		<div class="overflow-hidden rounded-xl border border-slate-200 mt-5">

@@ -59,7 +59,7 @@
 		</div>
 	</ContentBlock>
 
-	<ContentBlock title={{ icon: '�📦', text: 'Installation' }}>
+	<ContentBlock title={{ icon: '📦', text: 'Installation' }}>
 		<p class="mb-6">Install the BIOS UI Svelte package using your preferred package manager:</p>
 
 		<div class="space-y-4">
