@@ -10,12 +10,6 @@
 	let { className = '', children, ...restProps }: Props = $props();
 </script>
 
-<label class={`bInputLabel ${className}`} {...restProps}>
+<label class={`text-base ${className}`} {...restProps}>
 	{@render children?.()}
 </label>
-
-<style>
-	.bInputLabel {
-		font-size: var(--font-size-md);
-	}
-</style>

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	import '../app.css';
 	import '@bios-ui/core/css';
+	import '../app.css';
+	import { page } from '$app/stores';
 
 	let isSidebarOpen = false;
 

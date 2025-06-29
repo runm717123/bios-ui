@@ -10,12 +10,6 @@
 	let { className = '', children, ...restProps }: Props = $props();
 </script>
 
-<span class={`bBodyText ${className}`} {...restProps}>
+<span class={`text-base ${className}`} {...restProps}>
 	{@render children?.()}
 </span>
-
-<style>
-	.bBodyText {
-		font-size: var(--font-size-md);
-	}
-</style>

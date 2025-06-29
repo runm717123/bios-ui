@@ -10,18 +10,6 @@
 	let { className = '', children, ...restProps }: Props = $props();
 </script>
 
-<table class={`bTable ${className}`} {...restProps}>
+<table class={`border-collapse [&_td]:border [&_td]:border-fg-dark [&_th]:border [&_th]:border-fg-dark border border-fg-dark ${className}`} {...restProps}>
 	{@render children?.()}
 </table>
-
-<style>
-	.bTable {
-		border-collapse: collapse;
-	}
-
-	.bTable,
-	.bTable :global(td),
-	.bTable :global(th) {
-		border: 1px solid var(--color-fg-dark);
-	}
-</style>
