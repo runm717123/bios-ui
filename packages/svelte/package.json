@@ -1,9 +1,19 @@
 {
 	"name": "@bios-ui/svelte",
 	"version": "0.0.1",
+	"homepage": "https://bios-ui.netlify.app",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/runm717123/bios-ui.git"
+	},
+	"author": {
+		"name": "Nur",
+		"email": "runm717123@gmail.com"
+	},
 	"scripts": {
+		"pub": "pnpm publish --access public --no-git-checks",
 		"dev": "vite dev",
-		"build": "vite build && npm run prepack",
+		"build": "vite build && pnpm run prepack",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"prepack": "svelte-kit sync && svelte-package && publint",
@@ -19,9 +29,7 @@
 		"!dist/**/*.test.*",
 		"!dist/**/*.spec.*"
 	],
-	"sideEffects": [
-		"**/*.css"
-	],
+	"sideEffects": false,
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"type": "module",
@@ -32,7 +40,8 @@
 		}
 	},
 	"peerDependencies": {
-		"svelte": "^5.0.0"
+		"svelte": "^5.0.0",
+		"@bios-ui/core": "^1.0.0"
 	},
 	"dependencies": {
 		"@bios-ui/core": "workspace:*"
