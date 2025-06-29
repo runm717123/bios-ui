@@ -91,7 +91,7 @@
 			<div
 				class="w-10 h-10 bg-bg-dark border-1 border-fg-dark rounded-lg flex items-center justify-center"
 			>
-				<span class="text-white font-bold text-lg">B</span>
+				<span class="text-white font-bold text-lg">[B]</span>
 			</div>
 			<div>
 				<h1 class="text-2xl font-bold text-fg-dark">BIOS UI</h1>
