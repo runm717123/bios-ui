@@ -15,11 +15,16 @@ this codebase is a monorepo, the code is organized into apps and packages:
 /apps/storybook: Storybook app for the React UI components
 /apps/svelte-docs : Svelte documentation app
 /packages/* : reusable packages
-/packages/core: Core style and shared utilities
+/packages/core: Core style, theme, and shared utilities
 /packages/basic: React UI components
 /packages/svelte: Svelte UI components
 
-# Coding Standards and Preferences
+---
+applyTo: "**/*.ts,**/*.tsx"
+---
+# Coding Standards and Preferences for React
+
+## Coding Standards and Preferences
 - prefix className with b, example: `bButton`, `bCard`
 - when applying a class to an element, use the `className` prop with cx, example: `className={cx(bButton, className)}`
 - when creating react components, always use interface for props, and extending respective HTML element props, example:
@@ -27,3 +32,14 @@ this codebase is a monorepo, the code is organized into apps and packages:
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   // custom props
 }
+```
+
+---
+applyTo: "**/*.svelte"
+---
+# Coding Standards and Preferences for Svelte
+
+## Coding Standards and Preferences
+- use latest svelte v5 syntax
+- use tailwindcss for styling
+- the @bios-ui/core theme already match tailwindcss, so var(--spacing-xs) is equivalent to `0.25rem`
