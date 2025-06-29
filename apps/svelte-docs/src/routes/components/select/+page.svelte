@@ -1,9 +1,6 @@
 <script>
-	import { codeToHtml } from '$lib/utils/shiki';
 	import { Select } from '@bios-ui/svelte';
 	import CodeScript from '$lib/docs/code-script.svelte';
-
-	let highlightedCode = $state('');
 
 	const options = [
 		{ label: 'Option 1', value: 'option1' },
@@ -22,12 +19,6 @@
 </` + `script>
 
 <Select {options} />`;
-
-	$effect(() => {
-		codeToHtml(codeExample).then((html) => {
-			highlightedCode = html;
-		});
-	});
 </script>
 
 <div class="max-w-4xl">
@@ -49,7 +40,7 @@
 
 		<!-- Code Example Section -->
 		<div class="mt-6">
-			<CodeScript {highlightedCode} {codeExample} />
+			<CodeScript scripts={codeExample} />
 		</div>
 
 		<div class="overflow-hidden rounded-xl border border-slate-200 mt-5">
