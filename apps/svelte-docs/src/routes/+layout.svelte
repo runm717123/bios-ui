@@ -30,7 +30,7 @@
 					name: 'Select',
 					href: '/components/select'
 				},
-				
+
 				{
 					name: 'Textarea',
 					href: '/components/text-area'
