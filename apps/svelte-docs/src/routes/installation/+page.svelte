@@ -44,11 +44,11 @@
 		<p class="mb-6">Install the BIOS UI Svelte package using your preferred package manager:</p>
 
 		<div class="space-y-4">
-			<BasicScript title="npm" code="npm install @bios-ui/svelte-v2 @bios-ui/core" />
+			<BasicScript title="npm" code="npm install @bios-ui/svelte @bios-ui/core" />
 
-			<BasicScript title="pnpm" code="pnpm add @bios-ui/svelte-v2 @bios-ui/core" />
+			<BasicScript title="pnpm" code="pnpm add @bios-ui/svelte @bios-ui/core" />
 
-			<BasicScript title="yarn" code="yarn add @bios-ui/svelte-v2 @bios-ui/core" />
+			<BasicScript title="yarn" code="yarn add @bios-ui/svelte @bios-ui/core" />
 		</div>
 	</ContentBlock>
 	<ContentBlock title={{ icon: '⚙️', text: 'Setup' }}>
@@ -76,7 +76,7 @@
 				<h3 class="text-lg font-semibold mb-3">Import Components</h3>
 				<p class="mb-4">Import and use components in your Svelte files:</p>
 				<BasicScript
-					code="import &#123; Button &#125; from '@bios-ui/svelte-v2';&#10;&#10;&lt;Button&gt;Click me&lt;/Button&gt;"
+					code="import &#123; Button &#125; from '@bios-ui/svelte';&#10;&#10;&lt;Button&gt;Click me&lt;/Button&gt;"
 				/>
 			</div>
 		</div>

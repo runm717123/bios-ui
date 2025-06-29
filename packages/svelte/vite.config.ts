@@ -1,31 +1,19 @@
-import { defineConfig } from 'vite'
-import { svelte } from '@sveltejs/vite-plugin-svelte'
-import { dirname, resolve } from 'path';
-import { fileURLToPath } from 'url';
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-
-// https://vite.dev/config/
 export default defineConfig({
-	plugins: [
-		svelte({
-			compilerOptions: {
-				customElement: false,
-			},
-		}),
-	],
-	build: {
-		lib: {
-			entry: resolve(__dirname, 'src', 'lib', 'index.ts'),
-			formats: ['es'],
-		},
-		rollupOptions: {
-			external: [/node_modules/],
-			output: {
-				preserveModules: true,
-				preserveModulesRoot: 'src/lib',
-				entryFileNames: '[name].js',
-			},
-		},
-	},
+	plugins: [sveltekit()],
+	test: {
+		projects: [
+			{
+				extends: './vite.config.ts',
+				test: {
+					name: 'server',
+					environment: 'node',
+					include: ['src/**/*.{test,spec}.{js,ts}'],
+					exclude: ['src/**/*.svelte.{test,spec}.{js,ts}']
+				}
+			}
+		]
+	}
 });

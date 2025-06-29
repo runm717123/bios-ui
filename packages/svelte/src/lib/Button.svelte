@@ -1,10 +1,18 @@
 <script lang="ts">
-	export let size: 'small' | 'medium' | 'large' = 'medium';
-	export let className: string = '';
+	import type { Snippet } from 'svelte';
+
+	interface Props {
+		size?: 'small' | 'medium' | 'large';
+		className?: string;
+		children?: Snippet;
+		[key: string]: any;
+	}
+
+	let { size = 'medium', className = '', children, ...restProps }: Props = $props();
 </script>
 
-<button class={`bButton ${className}`} data-size={size} {...$$restProps}>
-	<slot />
+<button class={`bButton ${className}`} data-size={size} {...restProps}>
+	{@render children?.()}
 </button>
 
 

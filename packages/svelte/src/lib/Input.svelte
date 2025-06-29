@@ -1,8 +1,13 @@
 <script lang="ts">
-	export let className: string = '';
+	interface Props {
+		className?: string;
+		[key: string]: any;
+	}
+
+	let { className = '', ...restProps }: Props = $props();
 </script>
 
-<input class={`bInput ${className}`} {...$$restProps} />
+<input class={`bInput ${className}`} {...restProps} />
 
 <style>
 	.bInput {

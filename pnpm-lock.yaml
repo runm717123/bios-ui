@@ -132,9 +132,6 @@ importers:
       '@bios-ui/svelte':
         specifier: workspace:*
         version: link:../../packages/svelte
-      '@bios-ui/svelte-v2':
-        specifier: workspace:*
-        version: link:../../packages/svelte-v2
       '@tailwindcss/vite':
         specifier: ^4.1.11
         version: 4.1.11(vite@6.3.5)
@@ -298,31 +295,6 @@ importers:
         version: 9.1.0(eslint@8.57.1)
 
   packages/svelte:
-    dependencies:
-      '@bios-ui/core':
-        specifier: workspace:*
-        version: link:../core
-    devDependencies:
-      '@sveltejs/vite-plugin-svelte':
-        specifier: ^5.0.3
-        version: 5.1.0(svelte@5.34.7)(vite@6.3.5)
-      '@tsconfig/svelte':
-        specifier: ^5.0.4
-        version: 5.0.4
-      svelte:
-        specifier: ^5.28.1
-        version: 5.34.7
-      svelte-check:
-        specifier: ^4.1.6
-        version: 4.2.2(svelte@5.34.7)(typescript@5.8.3)
-      typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
-      vite:
-        specifier: ^6.3.5
-        version: 6.3.5(@types/node@22.15.21)
-
-  packages/svelte-v2:
     dependencies:
       '@bios-ui/core':
         specifier: workspace:*
@@ -3084,10 +3056,6 @@ packages:
       '@testing-library/dom': '>=7.21.4'
     dependencies:
       '@testing-library/dom': 10.4.0
-    dev: true
-
-  /@tsconfig/svelte@5.0.4:
-    resolution: {integrity: sha512-BV9NplVgLmSi4mwKzD8BD/NQ8erOY/nUE/GpgWe2ckx+wIQF5RyRirn/QsSSCPeulVpc3RA/iJt6DpfTIZps0Q==}
     dev: true
 
   /@types/argparse@1.0.38:

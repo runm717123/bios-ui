@@ -1,9 +1,17 @@
 <script lang="ts">
-	export let className: string = '';
+	import type { Snippet } from 'svelte';
+
+	interface Props {
+		className?: string;
+		children?: Snippet;
+		[key: string]: any;
+	}
+
+	let { className = '', children, ...restProps }: Props = $props();
 </script>
 
-<span class={`bBodyText ${className}`} {...$$restProps}>
-	<slot />
+<span class={`bBodyText ${className}`} {...restProps}>
+	{@render children?.()}
 </span>
 
 <style>

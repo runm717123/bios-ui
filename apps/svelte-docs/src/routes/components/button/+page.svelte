@@ -1,5 +1,5 @@
 <script>
-	import { Button } from '@bios-ui/svelte-v2';
+	import { Button } from '@bios-ui/svelte';
 </script>
 
 <div class="max-w-4xl">

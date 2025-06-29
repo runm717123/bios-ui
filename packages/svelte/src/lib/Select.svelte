@@ -1,9 +1,14 @@
 <script lang="ts">
-	export let options: Array<{ label: string; value: string }>;
-	export let className: string = '';
+	interface Props {
+		options: Array<{ label: string; value: string }>;
+		className?: string;
+		[key: string]: any;
+	}
+
+	let { options, className = '', ...restProps }: Props = $props();
 </script>
 
-<select class={`bSelect ${className}`} {...$$restProps}>
+<select class={`bSelect ${className}`} {...restProps}>
 	<option value="">Select an option</option>
 	{#each options as { label, value } (value)}
 		<option {value}>{label}</option>

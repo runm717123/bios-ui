@@ -1,8 +1,13 @@
 <script lang="ts">
-	export let className: string = '';
+	interface Props {
+		className?: string;
+		[key: string]: any;
+	}
+
+	let { className = '', ...restProps }: Props = $props();
 </script>
 
-<textarea class={`bTextArea ${className}`} {...$$restProps}></textarea>
+<textarea class={`bTextArea ${className}`} {...restProps}></textarea>
 
 <style>
 	.bTextArea {

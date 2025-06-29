@@ -18,7 +18,6 @@
 	"dependencies": {
 		"@bios-ui/core": "workspace:*",
 		"@bios-ui/svelte": "workspace:*",
-		"@bios-ui/svelte-v2": "workspace:*",
 		"@tailwindcss/vite": "^4.1.11",
 		"tailwindcss": "^4.1.11"
 	},
