@@ -1,5 +1,39 @@
 <script>
+	import { codeToHtml } from '$lib/utils/shiki';
 	import { Table } from '@bios-ui/svelte';
+	import { onMount } from 'svelte';
+
+	let highlightedCode = '';
+
+	const codeExample = `<` + `script>
+	import { Table } from '@bios-ui/svelte';
+</` + `script>
+
+<Table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Age</th>
+			<th>City</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>John</td>
+			<td>25</td>
+			<td>New York</td>
+		</tr>
+		<tr>
+			<td>Jane</td>
+			<td>30</td>
+			<td>Los Angeles</td>
+		</tr>
+	</tbody>
+</Table>`;
+
+	onMount(async () => {
+		highlightedCode = await codeToHtml(codeExample);
+	});
 </script>
 
 <div class="max-w-4xl">
@@ -37,6 +71,14 @@
 					</tr>
 				</tbody>
 			</Table>
+		</div>
+
+		<!-- Code Example Section -->
+		<div class="mt-6">
+			<h3 class="text-lg font-semibold text-fg-dark mb-3">Usage Examples</h3>
+			<div class="overflow-hidden rounded-xl border border-slate-200">
+				{@html highlightedCode}
+			</div>
 		</div>
 
 		<div class="overflow-hidden rounded-xl border border-slate-200 mt-5">

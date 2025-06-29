@@ -1,4 +1,17 @@
 <script>
+	import { codeToHtml } from '$lib/utils/shiki';
+	import { Select } from '@bios-ui/svelte';
+	import { onMount } from 'svelte';
+
+	let highlightedCode = '';
+
+	const options = [
+		{ label: 'Option 1', value: 'option1' },
+		{ label: 'Option 2', value: 'option2' },
+		{ label: 'Option 3', value: 'option3' }
+	];
+
+	const codeExample = `<` + `script>
 	import { Select } from '@bios-ui/svelte';
 
 	const options = [
@@ -6,6 +19,13 @@
 		{ label: 'Option 2', value: 'option2' },
 		{ label: 'Option 3', value: 'option3' }
 	];
+</` + `script>
+
+<Select {options} />`;
+
+	onMount(async () => {
+		highlightedCode = await codeToHtml(codeExample);
+	});
 </script>
 
 <div class="max-w-4xl">
@@ -23,6 +43,14 @@
 			class="bg-bg-dark flex items-center justify-center rounded-xl p-8 border border-slate-200/60"
 		>
 			<Select {options} />
+		</div>
+
+		<!-- Code Example Section -->
+		<div class="mt-6">
+			<h3 class="text-lg font-semibold text-fg-dark mb-3">Usage Examples</h3>
+			<div class="overflow-hidden rounded-xl border border-slate-200">
+				{@html highlightedCode}
+			</div>
 		</div>
 
 		<div class="overflow-hidden rounded-xl border border-slate-200 mt-5">

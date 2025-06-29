@@ -1,5 +1,22 @@
 <script>
+	import { codeToHtml } from '$lib/utils/shiki';
 	import { Input, InputLabel } from '@bios-ui/svelte';
+	import { onMount } from 'svelte';
+
+	let highlightedCode = '';
+
+	const codeExample = `<` + `script>
+	import { Input, InputLabel } from '@bios-ui/svelte';
+</` + `script>
+
+<InputLabel>
+  Field Label
+  <Input placeholder="Enter text here..." />
+</InputLabel>`;
+
+	onMount(async () => {
+		highlightedCode = await codeToHtml(codeExample);
+	});
 </script>
 
 <div class="max-w-4xl">
@@ -20,6 +37,14 @@
         Field Label
 				<Input placeholder="Enter text here..." />
 			</InputLabel>
+		</div>
+
+		<!-- Code Example Section -->
+		<div class="mt-6">
+			<h3 class="text-lg font-semibold text-fg-dark mb-3">Usage Examples</h3>
+			<div class="overflow-hidden rounded-xl border border-slate-200">
+				{@html highlightedCode}
+			</div>
 		</div>
 
 		<div class="overflow-hidden rounded-xl border border-slate-200 mt-5">
