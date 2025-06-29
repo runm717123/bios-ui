@@ -12,7 +12,30 @@
 		},
 		{
 			title: 'Components',
-			items: [{ name: 'Button', href: '/components/button' }]
+			items: [
+				{ name: 'Button', href: '/components/button' },
+				{
+					name: 'Table',
+					href: '/components/table'
+				},
+				{
+					name: 'BodyText',
+					href: '/components/body-text'
+				},
+				{
+					name: 'Input',
+					href: '/components/input'
+				},
+				{
+					name: 'Select',
+					href: '/components/select'
+				},
+				
+				{
+					name: 'Textarea',
+					href: '/components/text-area'
+				}
+			]
 		}
 	];
 
@@ -60,7 +83,7 @@
 	{/if}
 
 	<aside
-		class="w-72 bg-bg-dark shadow-xl border-r border-fg-dark h-full overflow-y-auto p-8 
+		class="w-72 bg-bg-dark shadow-xl border-r border-fg-dark h-full overflow-y-auto p-8
 		       fixed md:static z-40 transform transition-transform duration-300 ease-in-out
 		       {isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0"
 	>
@@ -71,11 +94,7 @@
 				<span class="text-white font-bold text-lg">B</span>
 			</div>
 			<div>
-				<h1
-					class="text-2xl font-bold text-fg-dark"
-				>
-					BIOS UI
-				</h1>
+				<h1 class="text-2xl font-bold text-fg-dark">BIOS UI</h1>
 				<p class="text-sm text-white">Svelte Components</p>
 			</div>
 		</div>
