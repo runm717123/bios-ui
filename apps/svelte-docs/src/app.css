@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import '@bios-ui/core/tw';
+@config "../tailwind.config.js";
 
 @theme {
 	--color-secondary: #8fa3c8;
