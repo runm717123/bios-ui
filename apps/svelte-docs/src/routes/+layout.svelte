@@ -51,13 +51,13 @@
 <div class="h-screen flex flex-row page-container">
 	<!-- Mobile hamburger button -->
 	<button
-		class="fixed top-4 left-4 z-50 p-2 rounded-lg bg-white shadow-lg border border-fg-dark md:hidden"
+		class="fixed top-4 left-4 z-20 p-2 rounded-lg bg-bg-dark shadow-lg border border-fg-dark md:hidden "
 		on:click={toggleSidebar}
 		aria-label="Toggle sidebar"
 	>
 		<svg
-			class="w-6 h-6 text-black"
-			fill="none"
+			class="w-6 h-6 text-fg-dark"
+			fill="currentColor"
 			stroke="currentColor"
 			viewBox="0 0 24 24"
 			xmlns="http://www.w3.org/2000/svg"
