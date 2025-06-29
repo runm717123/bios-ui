@@ -1,6 +1,25 @@
 <script>
 	import BasicScript from '$lib/docs/basic-script.svelte';
+	import CodeScript from '$lib/docs/code-script.svelte';
 	import ContentBlock from '$lib/docs/content-block.svelte';
+
+	const usageTextExample = `<script>
+	import { Button } from '@bios-ui/svelte';
+<\/script>
+
+<Button>Click me</Button>`;
+
+	const importStylesExample = `<script>
+	import '@bios-ui/core/css';
+	import './app.css'; // Your main CSS file
+<\/script>`;
+
+	const tailwindConfigExample = `export default {
+  content: [
+    './src/**/*.{html,svelte,ts,js}',
+    './node_modules/@bios-ui/**/*.{svelte}',
+  ],
+}`;
 </script>
 
 <div class="max-w-4xl">
@@ -51,33 +70,47 @@
 			<BasicScript title="yarn" code="yarn add @bios-ui/svelte @bios-ui/core" />
 		</div>
 	</ContentBlock>
+
 	<ContentBlock title={{ icon: '⚙️', text: 'Setup' }}>
 		<div class="space-y-6">
 			<div>
-				<h3 class="text-lg font-semibold text-secondary mb-3">Import Styles</h3>
-				<p class="text-secondary mb-4">Import the core styles in your main app file:</p>
-				<BasicScript
-				title="+layout.svelte"
-					code="import '@bios-ui/core/index.css';"
-				/>
-			</div>
+				<h3 class="text-lg font-semibold text-secondary mb-3">1. Setup Tailwind</h3>
 
-			<div>
-				<h3 class="text-lg font-semibold text-secondary mb-3">Inject Tailwind Theme</h3>
 				<p class="text-secondary mb-4">
-					To inject the tailwind theme with core design tokens just after your tailwind import:
+					Add the following configuration to your tailwind.config.js:
 				</p>
-				<BasicScript title="app.css" code="@import '@bios-ui/core/tw';" />
-				<p class="my-4">this way you can use the design tokens with tailwind classes</p>
-				<BasicScript code="<div class='bg-bg-dark'>your content</div>" />
+				<CodeScript fileName="tailwind.config.js" scripts={tailwindConfigExample} />
+
+				<p class="text-secondary my-4">
+					Then in the your main css file, load the config (Tailwind v4 require this). also you will
+					need to import the core styles theme to centralize it:
+				</p>
+
+				<CodeScript
+					fileName="app.css"
+					scripts={`
+@import "tailwindcss";
+@import "@bios-ui/core/tw";
+@config "../tailwind.config.js";
+				`}
+				/>
+				<p class="text-secondary my-4">
+					To inject the tailwind theme with core design tokens, this way you can use the design
+					tokens with tailwind classes later
+				</p>
+				<CodeScript scripts="<div class='bg-bg-dark'>your content</div>" />
+			</div>
+			<div>
+				<h3 class="text-lg font-semibold text-secondary mb-3">2. Import Styles</h3>
+				<p class="text-secondary mb-4">Import the core styles in your main app file:</p>
+				<CodeScript fileName="+layout.svelte" scripts={importStylesExample} />
 			</div>
 
 			<div>
-				<h3 class="text-lg font-semibold mb-3">Import Components</h3>
-				<p class="mb-4">Import and use components in your Svelte files:</p>
-				<BasicScript
-					code="import &#123; Button &#125; from '@bios-ui/svelte';&#10;&#10;&lt;Button&gt;Click me&lt;/Button&gt;"
-				/>
+				<h3 class="text-lg font-semibold mb-3">3. Import Components</h3>
+				<p class="mb-4">
+					once above steps are done, you can start using the components in your Svelte files.</p>
+				<CodeScript scripts={usageTextExample} />
 			</div>
 		</div>
 	</ContentBlock>
@@ -89,9 +122,7 @@
 				<p class="mb-4">If components don't appear styled correctly:</p>
 				<ol class="list-decimal list-inside space-y-2 ml-4">
 					<li>
-						Ensure you've imported <code class="bg-slate-100 px-2 py-1 rounded text-sm"
-							>@bios-ui/core/index.css</code
-						>
+						make sure you have done <strong>all</strong> the above steps properly, especially 1st and 2nd steps
 					</li>
 					<li>Check that the import is in the correct order (before other styles)</li>
 					<li>Verify your bundler is processing CSS files correctly</li>
@@ -102,9 +133,10 @@
 				<h3 class="text-lg font-semibold mb-3">TypeScript Errors</h3>
 				<p class="mb-4">If you encounter TypeScript errors:</p>
 				<ol class="list-decimal list-inside space-y-2 ml-4">
-					<li>Ensure you're using a compatible TypeScript version (4.0+)</li>
+					<li>Ensure you're using a compatible TypeScript version (5.0+)</li>
 					<li>
-						Check that your <code class="bg-slate-100 px-2 py-1 rounded text-sm">tsconfig.json</code
+						Check that your <code class="bg-slate-100 text-fg-dark px-2 py-1 rounded text-sm"
+							>tsconfig.json</code
 						> includes the node_modules
 					</li>
 					<li>Try restarting your TypeScript server</li>
