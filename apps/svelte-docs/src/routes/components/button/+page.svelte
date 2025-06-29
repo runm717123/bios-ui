@@ -1,11 +1,9 @@
 <script>
-	import { copyToClipboard } from '$lib/utils/clipboard';
 	import { codeToHtml } from '$lib/utils/shiki';
 	import { Button } from '@bios-ui/svelte';
-	import { CopyCheckIcon, CopyIcon } from '@lucide/svelte';
-	import { onMount } from 'svelte';
+	import CodeScript from '$lib/docs/code-script.svelte';
 
-	let highlightedCode = '';
+	let highlightedCode = $state('');
 
 	const codeExample =
 		`<` +
@@ -16,18 +14,10 @@
 <Button size="medium">Small</Button>
 `;
 
-	let isCopied = false;
-	const handleCopy = async () => {
-		await copyToClipboard(codeExample);
-		isCopied = true;
-
-		setTimeout(() => {
-			isCopied = false;
-		}, 1000);
-	};
-
-	onMount(async () => {
-		highlightedCode = await codeToHtml(codeExample);
+	$effect(() => {
+		codeToHtml(codeExample).then((html) => {
+			highlightedCode = html;
+		});
 	});
 </script>
 
@@ -48,23 +38,8 @@
 			<Button size="medium">Click me</Button>
 		</div>
 
-		<!-- Code Example Section -->
 		<div class="mt-6">
-			<h3 class="text-lg font-semibold text-fg-dark mb-3">Usage Examples</h3>
-			<div class="relative overflow-hidden rounded-xl border border-slate-200">
-				<button
-					onclick={handleCopy}
-					class="absolute top-3 right-3 z-10 p-2 rounded-lg bg-slate-100 hover:bg-slate-200 border border-slate-300 transition-colors"
-					title="Copy code"
-				>
-					{#if isCopied}
-						<CopyCheckIcon color="var(--color-fg-dark)" size={15} />
-					{:else}
-						<CopyIcon size={15} />
-					{/if}
-				</button>
-				{@html highlightedCode}
-			</div>
+			<CodeScript {highlightedCode} {codeExample} />
 		</div>
 
 		<div class="overflow-hidden rounded-xl border border-slate-200 mt-5">

@@ -1,9 +1,9 @@
 <script>
 	import { codeToHtml } from '$lib/utils/shiki';
 	import { Select } from '@bios-ui/svelte';
-	import { onMount } from 'svelte';
+	import CodeScript from '$lib/docs/code-script.svelte';
 
-	let highlightedCode = '';
+	let highlightedCode = $state('');
 
 	const options = [
 		{ label: 'Option 1', value: 'option1' },
@@ -23,8 +23,10 @@
 
 <Select {options} />`;
 
-	onMount(async () => {
-		highlightedCode = await codeToHtml(codeExample);
+	$effect(() => {
+		codeToHtml(codeExample).then((html) => {
+			highlightedCode = html;
+		});
 	});
 </script>
 
@@ -47,10 +49,7 @@
 
 		<!-- Code Example Section -->
 		<div class="mt-6">
-			<h3 class="text-lg font-semibold text-fg-dark mb-3">Usage Examples</h3>
-			<div class="overflow-hidden rounded-xl border border-slate-200">
-				{@html highlightedCode}
-			</div>
+			<CodeScript {highlightedCode} {codeExample} />
 		</div>
 
 		<div class="overflow-hidden rounded-xl border border-slate-200 mt-5">
