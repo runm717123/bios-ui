@@ -1,7 +1,7 @@
 {
 	"name": "@bios-ui/core",
 	"type": "module",
-	"version": "0.0.10",
+	"version": "0.0.11",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/runm717123/bios-ui.git"

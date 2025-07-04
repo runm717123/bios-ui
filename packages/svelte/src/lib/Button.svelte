@@ -2,18 +2,18 @@
 	import type { Snippet } from 'svelte';
 
 	interface Props {
-		size?: 'small' | 'medium' | 'large';
+		size?: TSize;
 		className?: string;
 		children?: Snippet;
 		[key: string]: any;
 	}
 
-	let { size = 'medium', className = '', children, ...restProps }: Props = $props();
+	let { size = 'md', className = '', children, ...restProps }: Props = $props();
 
 	const sizeClasses = {
-		small: 'px-2 py-1 text-sm',
-		medium: 'px-4 py-2 text-base',
-		large: 'px-6 py-3 text-lg'
+		sm: 'px-2 py-1 text-sm',
+		md: 'px-4 py-2 text-base',
+		lg: 'px-6 py-3 text-lg'
 	};
 </script>
 
