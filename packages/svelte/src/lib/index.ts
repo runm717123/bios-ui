@@ -8,3 +8,4 @@ export { default as InputLabel } from './InputLabel.svelte';
 export { default as Select } from './Select.svelte';
 export { default as Table } from './Table.svelte';
 export { default as TextArea } from './TextArea.svelte';
+export { default as Toggle } from './Toggle.svelte';

@@ -43,3 +43,5 @@ applyTo: "**/*.svelte"
 - use latest svelte v5 syntax
 - use tailwindcss for styling
 - the @bios-ui/core theme already match tailwindcss, so var(--spacing-xs) is equivalent to `0.25rem`
+- the tailwind already has theme setup, refer to to @bios-ui/core/tw for the theme setup
+- use the theme for colors, spacing, and other design tokens

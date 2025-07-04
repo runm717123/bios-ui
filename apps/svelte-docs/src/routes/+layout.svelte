@@ -34,6 +34,10 @@
 				{
 					name: 'Textarea',
 					href: '/components/text-area'
+				},
+				{
+					name: 'Toggle',
+					href: '/components/toggle'
 				}
 			]
 		}
