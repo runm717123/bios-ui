@@ -18,7 +18,7 @@
 </script>
 
 <button
-	class={`bg-transparent text-fg-dark border-2 border-fg-dark active:bg-white/90 active:border-white bButton ${sizeClasses[size]} ${className}`}
+	class={`bg-transparent text-fg-dark border border-fg-dark active:bg-white/90 active:border-white bButton ${sizeClasses[size]} ${className}`}
 	{...restProps}
 >
 	{@render children?.()}
