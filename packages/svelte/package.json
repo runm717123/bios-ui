@@ -1,6 +1,6 @@
 {
 	"name": "@bios-ui/svelte",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"homepage": "https://bios-ui.netlify.app",
 	"repository": {
 		"type": "git",
@@ -71,3 +71,4 @@
 		"svelte"
 	]
 }
+
