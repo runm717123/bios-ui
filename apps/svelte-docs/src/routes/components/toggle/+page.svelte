@@ -27,14 +27,10 @@
 	<div
 		class="bg-bg-darker text-secondary rounded-2xl p-8 shadow-lg border border-slate-200/60 mb-8"
 	>
-		<div
-			class="bg-bg-dark flex items-center justify-center rounded-xl p-8 border border-slate-200/60"
-		>
-			<InputLabel>
-				Enable notifications
-				<Toggle bind:checked={isToggled} />
-			</InputLabel>
-		</div>
+		<InputLabel class="flex items-center justify-center gap-2">
+			Enable notifications
+			<Toggle bind:checked={isToggled} />
+		</InputLabel>
 
 		<!-- Code Example Section -->
 		<div class="mt-6">
