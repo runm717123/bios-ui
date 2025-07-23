@@ -8,7 +8,7 @@
 	import { Button } from '@bios-ui/svelte';
 </` +
 		`script>
-<Button size="medium">Small</Button>
+<Button size="sm">Small</Button>
 `;
 </script>
 
@@ -26,7 +26,7 @@
 		<div
 			class="bg-bg-dark flex items-center justify-center rounded-xl p-8 border border-slate-200/60"
 		>
-			<Button size="medium">Click me</Button>
+			<Button size="md">Click me</Button>
 		</div>
 
 		<div class="mt-6">
@@ -46,8 +46,8 @@
 				<tbody>
 					<tr>
 						<td>size</td>
-						<td>'small' | 'medium' | 'large'</td>
-						<td>'medium'</td>
+						<td>'sm' | 'md' | 'lg'</td>
+						<td>'md'</td>
 						<td>Controls the size of the button</td>
 					</tr>
 					<tr>
