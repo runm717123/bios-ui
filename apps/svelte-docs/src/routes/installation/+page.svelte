@@ -2,6 +2,8 @@
 	import BasicScript from '$lib/docs/basic-script.svelte';
 	import CodeScript from '$lib/docs/code-script.svelte';
 	import ContentBlock from '$lib/docs/content-block.svelte';
+	import coverageBadge from '@bios-ui/svelte/coverage-badge.svg';
+	import { GITHUB_REPO_URL } from '$lib/constants';
 
 	const usageTextExample = `<script>
 	import { Button } from '@bios-ui/svelte';
@@ -25,6 +27,11 @@
 <div class="max-w-4xl">
 	<div class="mb-8">
 		<h1 class="text-5xl font-bold color-fg-dark mb-4">Getting Started</h1>
+		<div class="mb-4">
+			<a href={GITHUB_REPO_URL} target="_blank" rel="noopener noreferrer">
+				<img src={coverageBadge} alt="Svelte Coverage Badge" class="inline-block hover:opacity-80 transition-opacity cursor-pointer" />
+			</a>
+		</div>
 		<p class="text-xl text-secondary leading-relaxed">
 			Install and set up BIOS UI Svelte components in your project.
 		</p>
@@ -162,7 +169,7 @@
 			<li class="flex items-center gap-3">
 				<div class="w-2 h-2 bg-blue-500 rounded-full"></div>
 				<a
-					href="https://github.com/your-repo/bios-ui/issues"
+					href="{GITHUB_REPO_URL}/issues"
 					class="text-blue-600 hover:text-blue-800 transition-colors">GitHub Issues</a
 				> for bug reports
 			</li>
@@ -175,7 +182,7 @@
 			<li class="flex items-center gap-3">
 				<div class="w-2 h-2 bg-blue-500 rounded-full"></div>
 				<a
-					href="https://github.com/your-repo/bios-ui/blob/main/CONTRIBUTING.md"
+					href="{GITHUB_REPO_URL}/blob/main/CONTRIBUTING.md"
 					class="text-blue-600 hover:text-blue-800 transition-colors">Contributing Guide</a
 				> for development setup
 			</li>

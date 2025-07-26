@@ -39,6 +39,10 @@
 		".": {
 			"types": "./dist/index.d.ts",
 			"svelte": "./dist/index.js"
+		},
+		"./coverage-badge.svg": {
+			"import": "./coverage/coverage-badge.svg",
+			"default": "./coverage/coverage-badge.svg"
 		}
 	},
 	"peerDependencies": {
