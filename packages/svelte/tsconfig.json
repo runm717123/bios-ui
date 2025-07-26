@@ -11,5 +11,11 @@
 		"strict": true,
 		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
-	}
+		"types": [
+			"vitest/globals"
+		],
+	},
+	"files": [
+		"./setup-test.ts"
+	]
 }

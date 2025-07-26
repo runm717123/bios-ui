@@ -3,6 +3,13 @@ applyTo: '**'
 ---
 Response Format, Code Structure, Coding Standards and Preferences that AI should follow
 
+# Tools and environment
+- use pnpm as the package manager
+- use vitest for unit testing
+- use @testing-library/react for React unit testing
+- use @testing-library/svelte for Svelte unit testing
+- vitest globals are available, such as `describe`, `it`, `expect`, `beforeEach`, etc. no need to import them
+
 # Response Format
 - no need to include description, summary, or any additional text
 - just display the code snippet, and display description only when asked
@@ -45,3 +52,13 @@ applyTo: "**/*.svelte"
 - the @bios-ui/core theme already match tailwindcss, so var(--spacing-xs) is equivalent to `0.25rem`
 - the tailwind already has theme setup, refer to to @bios-ui/core/tw for the theme setup
 - use the theme for colors, spacing, and other design tokens
+
+## Unit test
+- avoid overly complex tests, keep it simple and so its easier to maintain
+- avoid testing tailwindcss classes, just focus on the component's functionality
+- can determine the test cases based on the component's props
+
+## File structure
+- the most important files are under src/lib
+- unit test files should be placed in the folder named `__tests__` under the same folder as the component
+- the test files should be named `*.test.ts` or `*.svelte.test.ts`

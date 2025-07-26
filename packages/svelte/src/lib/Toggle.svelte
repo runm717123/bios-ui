@@ -32,68 +32,68 @@
 	type="button"
 	role="switch"
 	aria-checked={checked}
-	class={`bToggle relative inline-flex items-center border-2 border-fg-dark bg-transparent transition-colors duration-200 ease-in-out focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed ${sizeClasses[size]} ${className}`}
-	class:bToggle--checked={checked}
+	class={`b-toggle relative inline-flex items-center border-2 border-fg-dark bg-transparent transition-colors duration-200 ease-in-out focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed ${sizeClasses[size]} ${className}`}
+	class:b-toggle--checked={checked}
 	{disabled}
 	onclick={() => !disabled && (checked = !checked)}
 	{...restProps}
 >
 	<span
-		class={`bToggle__thumb inline-block bg-fg-dark transition-transform duration-200 ease-in-out ${thumbSizeClasses[size]} ${translateClasses[size]}`}
-		class:bToggle__thumb--checked={checked}
+		class={`b-toggle__thumb inline-block bg-fg-dark transition-transform duration-200 ease-in-out ${thumbSizeClasses[size]} ${translateClasses[size]}`}
+		class:b-toggle__thumb--checked={checked}
 	></span>
 </button>
 
 <style>
-	.bToggle {
+	.b-toggle {
 		border-radius: 9999px;
 		cursor: pointer;
 	}
 
-	.bToggle:hover {
+	.b-toggle:hover {
 		box-shadow:
 			inset 0 0 5px 0 var(--color-fg-dark),
 			0 0 10px 2px var(--color-fg-dark);
 	}
 
-	.bToggle:focus {
+	.b-toggle:focus {
 		outline: none;
 		box-shadow:
 			inset 0 0 5px 0 var(--color-fg-dark),
 			0 0 10px 2px var(--color-fg-dark);
 	}
 
-	.bToggle--checked {
+	.b-toggle--checked {
 		background-color: var(--color-fg-dark);
 		border-color: var(--color-fg-dark);
 	}
 
-	.bToggle--checked:hover {
+	.b-toggle--checked:hover {
 		box-shadow:
 			inset 0 0 5px 0 var(--color-bg-dark),
 			0 0 10px 2px var(--color-fg-dark);
 	}
 
-	.bToggle--checked:focus {
+	.b-toggle--checked:focus {
 		box-shadow:
 			inset 0 0 5px 0 var(--color-bg-dark),
 			0 0 10px 2px var(--color-fg-dark);
 	}
 
-	.bToggle__thumb {
+	.b-toggle__thumb {
 		border-radius: 50%;
 		margin: 1px;
 	}
 
-	.bToggle__thumb--checked {
+	.b-toggle__thumb--checked {
 		background-color: var(--color-bg-dark);
 	}
 
-	.bToggle:disabled {
+	.b-toggle:disabled {
 		cursor: not-allowed;
 	}
 
-	.bToggle:disabled:hover {
+	.b-toggle:disabled:hover {
 		box-shadow: none;
 	}
 </style>
