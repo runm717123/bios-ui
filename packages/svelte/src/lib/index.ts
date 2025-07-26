@@ -1,5 +1,3 @@
-// Reexport your entry components here
-
 export { default as Button } from './Button.svelte';
 export { default as BodyText } from './BodyText.svelte';
 export { default as BodyTextSmall } from './BodyTextSmall.svelte';

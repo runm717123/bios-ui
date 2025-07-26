@@ -1,28 +1,9 @@
 # bios-ui
 
-**bios-ui** is a React component library designed to streamline the development of user interfaces.  
+**bios-ui** is a component library for React and Svelte designed to streamline the development of user interfaces.  
 It offers a collection of reusable components to accelerate your development process.
 
-## 📦 Installation
-
-Install the package via npm:
-
-```bash
-# coming soon
-```
-
-## 🚀 Usage
-
-Import and use components in your React application:
-
-```jsx
-# ignore
-import { Button } from 'bios-ui';
-
-function App() {
-  return <Button>Click Me</Button>;
-}
-```
+![Coverage Badge](packages/svelte/coverage/coverage-badge.svg)
 
 ## 📚 Documentation
 
